@@ -1,44 +1,81 @@
 package be.ucll.herexamen.model;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+@Entity
 public class Werkgever {
 
-    @NotNull
-    @NotEmpty
-    public String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @NotNull
     @NotEmpty
-    public String lastName;
+    private String name;
 
     @NotNull
     @NotEmpty
-    public String email;
+    private String lastName;
+
+    @NotEmpty
+    private String password;
 
     @NotNull
     @NotEmpty
-    public String telefoon;
+    private String email;
 
     @NotNull
     @NotEmpty
-    public Date aangemeld;
+    private String telefoon;
 
     @NotNull
     @NotEmpty
-    public int score;
+    private String aangemeld;
 
 
-    public Werkgever(String name, String lastName, String email, String telefoon){
+    private String bedrijf;
+
+    private int score;
+
+    private String role;
+
+    /*@OneToMany(cascade = CascadeType.ALL)
+    @MapKeyColumn(name = "jobID")
+    private List<Job> jobs = new ArrayList<>();
+    public void addJob(Job job){
+        jobs.add(job);
+    }*/
+    public Werkgever(){
+        setRoll();
+    }
+
+
+    public Werkgever(String name, String lastName, String password,  String email, String telefoon){
         setName(name);
         setLastName(lastName);
+        setPassword(password);
         setTelefoon(telefoon);
         setEmail(email);
-        setAangemeld(new Date());
+        setAangemeldMetDatum(new Date());
+        setRoll();
+        setBedrijf("NVT");
+    }
 
-
+    public Werkgever(String name, String lastName, String password, String email,  String telefoon, String bedrijf){
+        setName(name);
+        setLastName(lastName);
+        setPassword(password);
+        setTelefoon(telefoon);
+        setEmail(email);
+        setAangemeldMetDatum(new Date());
+        setRoll();
+        setBedrijf(bedrijf);
     }
     public String getName() {
         return name;
@@ -50,6 +87,14 @@ public class Werkgever {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setLastName(String lastName) {
@@ -72,14 +117,28 @@ public class Werkgever {
         this.telefoon = telefoon;
     }
 
-    public Date getAangemeld() {
+    public String getBedrijf() {
+        return bedrijf;
+    }
+
+    public void setBedrijf(String bedrijf) {
+        this.bedrijf = bedrijf;
+    }
+
+    public String getAangemeld() {
         return aangemeld;
     }
 
-    public void setAangemeld(Date aangemeld) {
+    public void setAangemeld(String aangemeld) {
         this.aangemeld = aangemeld;
     }
 
+    public void setAangemeldMetDatum(Date aangemeld){
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+        String DateToStr = format.format(aangemeld);
+        this.aangemeld = DateToStr;
+    }
     public int getScore() {
         return score;
     }
@@ -87,4 +146,15 @@ public class Werkgever {
     public void setScore(int score) {
         this.score = score;
     }
+
+    public String getRoll() {
+        return role;
+    }
+
+    public void setRoll() {
+        this.role = "WERKGEVER";
+    }
+
+
+
 }

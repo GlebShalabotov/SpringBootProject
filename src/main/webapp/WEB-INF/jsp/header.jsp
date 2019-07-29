@@ -3,9 +3,9 @@
 <header>
     <nav>
     <ul>
-        <li><a href="/overview">Overzicht</a></li>
-        <li><a href="/logIn">logIn</a></li>
-        <li><a href="/addJob">AddJob</a> </li>
+        <li><a href="/overzicht">Overzicht</a></li>
+        <li><a href="/login">logIn</a></li>
+        <li><a href="/toevoegen">AddJob</a> </li>
     </ul>
     </nav>
     

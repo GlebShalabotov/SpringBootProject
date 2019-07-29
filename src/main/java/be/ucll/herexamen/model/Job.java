@@ -1,73 +1,98 @@
 package be.ucll.herexamen.model;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@Entity
 
 public class Job {
-    @NotNull
-    @NotEmpty
-    private int jobID;
 
-    @NotNull
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+
     @NotEmpty
     private String beschrijving;
 
-    @NotNull
     @NotEmpty
-    private double duur;
+    private String duur;
 
-    @NotNull
-    @NotEmpty
-    private Date datum;
+    private String datum;
 
-    @NotNull
+    private String jobStatus;
     @NotEmpty
     private String details;
 
+    @NotNull
+    @ManyToOne(cascade = CascadeType.DETACH)
     private Werkgever werkgever;
 
-    private Werknemer werknemer;
+   /* @ManyToOne(cascade = CascadeType.DETACH)
+    private Werknemer werknemer;*/
 
-    public Job(int jobID, String beschrijving, double duur, String details, Werkgever werkgever){
-        setJobID(jobID);
+    public Job(){
+        setDatum(new Date());
+    }
+
+
+    public Job(String beschrijving, String duur, String details, Werkgever werkgever){
         setBeschrijving(beschrijving);
         setDuur(duur);
         setDetails(details);
         setWerkgever(werkgever);
         setDatum(new Date());
+        setJobStatus("Beschikbaar");
     }
 
-    public int getJobID() {
-        return jobID;
+    public int getId() {
+        return id;
     }
 
-    public void setJobID(int jobID) {
-        this.jobID = jobID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBeschrijving() {
-        return beschrijving;
+        return beschrijving.toLowerCase();
     }
 
     public void setBeschrijving(String beschrijving) {
         this.beschrijving = beschrijving;
     }
 
-    public double getDuur() {
+    public String getDuur() {
         return duur;
     }
 
-    public void setDuur(double duur) {
+    public void setDuur(String duur) {
         this.duur = duur;
     }
 
-    public Date getDatum() {
+    public String getDatum() {
         return datum;
     }
 
     public void setDatum(Date datum) {
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+        String DateToStr = format.format(datum);
+
+        this.datum = DateToStr;
+    }
+
+    public String getJobStatus() {
+        return jobStatus;
+    }
+
+    public void setJobStatus(String jobStatus) {
+        this.jobStatus = jobStatus;
+    }
+
+    public void setDatum(String datum) {
         this.datum = datum;
     }
 
@@ -87,11 +112,19 @@ public class Job {
         this.werkgever = werkgever;
     }
 
-    public Werknemer getWerknemer() {
+   /* public Werknemer getWerknemer() {
         return werknemer;
     }
 
     public void setWerknemer(Werknemer werknemer) {
         this.werknemer = werknemer;
+    }*/
+
+    public void updateJob(Job job){
+        setDatum(job.getDatum());
+        setBeschrijving(job.getBeschrijving());
+        setDuur(job.getDuur());
+        setDetails(job.getDetails());
+        /*setWerkgever(job.getWerkgever());*/
     }
 }
