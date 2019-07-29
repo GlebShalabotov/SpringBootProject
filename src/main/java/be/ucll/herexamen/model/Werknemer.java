@@ -45,14 +45,16 @@ public class Werknemer {
 
     private int leeftijd;
 
+    private String password;
     private String role;
     public Werknemer(){
 
     }
 
-    public Werknemer(String name, String lastName, String geboorteJaar, String email, String cv) throws ParseException {
+    public Werknemer(String name, String lastName, String pw, String geboorteJaar, String email, String cv) throws ParseException {
         setName(name);
         setLastName(lastName);
+        setPassword(pw);
         setEmail(email);
         setCv(cv);
         setDatum(new Date());
@@ -61,9 +63,10 @@ public class Werknemer {
         setLeeftijd(calculateAge(geboorteJaar));
     }
 
-    public Werknemer(String name, String lastName, String geboorteJaar, String email, String cv, Job job) throws ParseException {
+    public Werknemer(String name, String lastName, String pw, String geboorteJaar, String email, String cv, Job job) throws ParseException {
         setName(name);
         setLastName(lastName);
+        setPassword(pw);
         setEmail(email);
         setCv(cv);
         addJob(job);
@@ -174,6 +177,16 @@ public class Werknemer {
         Period diff = Period.between(ld, LocalDate.now());
         return diff.getYears();
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
     /* public Map<Integer, Job> getJobs() {
         return this.jobs;
     }

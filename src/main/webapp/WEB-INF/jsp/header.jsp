@@ -8,5 +8,5 @@
         <li><a href="/toevoegen">AddJob</a> </li>
     </ul>
     </nav>
-    
+    <p><sec:authorize acces="hasRole('WERKNEMER')"> het lukte</sec:authorize></p>
 </header>

@@ -1,5 +1,4 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!doctype html>
 <html lang="nl">
 <head>
@@ -12,6 +11,8 @@
 <body>
 <jsp:include page="header.jsp"/>
 <h2>Overzicht</h2>
+<security:authorize access = "hasRole('WERKNEMER')"> dik</security:authorize>
+
 <table>
     <thead>
     <th>Beschrijving</th>

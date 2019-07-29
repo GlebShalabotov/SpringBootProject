@@ -36,8 +36,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .mvcMatchers("/overzicht", "/h2-console/**").permitAll()
-                .mvcMatchers("/overzicht/details/*").hasAnyRole("WERKGEVER", "WERKNEMER")
-                .mvcMatchers("/toevoegen").permitAll()
+                .mvcMatchers("/overzicht/details*").hasAnyRole("WERKGEVER", "WERKNEMER")
+                .mvcMatchers("/toevoegen").hasRole("WERKGEVER")
                 .mvcMatchers("/console/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -50,7 +50,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/overzicht")
                 .permitAll();
         http.csrf().disable();
-        http.headers().frameOptions().disable();
     }
 
     @Autowired
@@ -58,8 +57,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .passwordEncoder(passwordEncoder())
-                .usersByUsernameQuery("select email, password, 'true' as enabled  from werkgever where email=? limit 1")
-                .authoritiesByUsernameQuery("select email, role from werkgever where email=?");
+                .usersByUsernameQuery("select email, password, 'true' as enabled  from werknemer where email=? limit 1")
+                .authoritiesByUsernameQuery("select email, role from werknemer where email=?");
         // authentication manager config}
     }
 

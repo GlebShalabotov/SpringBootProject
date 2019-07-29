@@ -11,7 +11,6 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-
 <p> toevoegen page</p>
 <%--<table>
     <thead>
