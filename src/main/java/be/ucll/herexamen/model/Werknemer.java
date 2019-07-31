@@ -1,5 +1,7 @@
 package be.ucll.herexamen.model;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -11,24 +13,58 @@ import java.time.ZoneId;
 import java.util.*;
 
 @Entity
-
+@Table(name = "WERKNEMER")
 public class Werknemer extends User {
 
-    @Id
+ /*   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotNull
-    @NotEmpty
-    public String name;
-
-    @NotNull
-    @NotEmpty
-    public String lastName;
 
     @NotNull
     @NotEmpty
     public String email;
+    private String password;
+    private String role;*/
+
+  /*  public String getRoll() {
+        return role;
+    }
+
+    public void setRoll() {
+        this.role = "WERKNEMER";
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }*/
+
+    @NotNull
+    @NotEmpty
+    public String name;
+    @NotNull
+    @NotEmpty
+    public String lastName;
 
     @NotNull
     @NotEmpty
@@ -48,10 +84,8 @@ public class Werknemer extends User {
 
     private int leeftijd;
 
-    private String password;
-    private String role;
     public Werknemer(){
-
+        setRole("WERKNEMER");
     }
 
     public Werknemer(String name, String lastName, String pw, String geboorteJaar, String email, String cv) throws ParseException {
@@ -61,7 +95,7 @@ public class Werknemer extends User {
         setEmail(email);
         setCv(cv);
         setDatum(new Date());
-        setRoll();
+        setRole("WERKNEMER");
         setGeboorteJaar(geboorteJaar);
         setLeeftijd(calculateAge(geboorteJaar));
     }
@@ -74,7 +108,7 @@ public class Werknemer extends User {
         setCv(cv);
         addJob(job);
         setDatum(new Date());
-        setRoll();
+        setRole("WERKNEMER");
         setGeboorteJaar(geboorteJaar);
         setLeeftijd(calculateAge(geboorteJaar));
     }
@@ -111,14 +145,6 @@ public class Werknemer extends User {
         this.leeftijd = leeftijd;
     }
 
-    public String getRoll() {
-        return role;
-    }
-
-    public void setRoll() {
-        this.role = "WERKNEMER";
-    }
-
     public String getName() {
         return name;
     }
@@ -135,14 +161,6 @@ public class Werknemer extends User {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getCv() {
         return cv;
     }
@@ -157,14 +175,6 @@ public class Werknemer extends User {
 
     public void setAangemeld(String aangemeld) {
         this.aangemeld = aangemeld;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public List<Job> getJobs() {
@@ -187,14 +197,6 @@ public class Werknemer extends User {
                 .toLocalDate();
         Period diff = Period.between(ld, LocalDate.now());
         return diff.getYears();
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public void addNewCurrentJob(Job j) throws Exception {

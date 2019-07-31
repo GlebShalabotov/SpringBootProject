@@ -64,6 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .exceptionHandling().accessDeniedHandler(accessDeniedHandler());
         http.csrf().disable();
+        http.headers().frameOptions().disable();
     }
 
     @Autowired
@@ -71,8 +72,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .passwordEncoder(passwordEncoder())
-                .usersByUsernameQuery("select email, password, 'true' as enabled  from werknemer where email=? limit 1")
-                .authoritiesByUsernameQuery("select email, role from werknemer where email=?");
+                .usersByUsernameQuery("select email, password, 'true' as enabled  from user where email=? limit 1")
+                .authoritiesByUsernameQuery("select email, role from user where email=?");
         // authentication manager config}
     }
 

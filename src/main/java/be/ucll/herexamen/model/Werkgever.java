@@ -11,9 +11,20 @@ import java.util.List;
 @Entity
 public class Werkgever extends User{
 
-    @Id
+  /*  @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+
+    @NotEmpty
+    private String password;
+
+    @NotNull
+    @NotEmpty
+    private String email;
+
+
+    private String role;*/
 
     @NotNull
     @NotEmpty
@@ -22,13 +33,6 @@ public class Werkgever extends User{
     @NotNull
     @NotEmpty
     private String lastName;
-
-    @NotEmpty
-    private String password;
-
-    @NotNull
-    @NotEmpty
-    private String email;
 
     @NotNull
     @NotEmpty
@@ -43,7 +47,6 @@ public class Werkgever extends User{
 
     private int score;
 
-    private String role;
 
     /*@OneToMany(cascade = CascadeType.ALL)
     @MapKeyColumn(name = "jobID")
@@ -52,7 +55,7 @@ public class Werkgever extends User{
         jobs.add(job);
     }*/
     public Werkgever(){
-        setRoll();
+        setRole("WERKGEVER");
     }
 
 
@@ -63,7 +66,7 @@ public class Werkgever extends User{
         setTelefoon(telefoon);
         setEmail(email);
         setAangemeldMetDatum(new Date());
-        setRoll();
+        setRole("WERKGEVER");
         setBedrijf("NVT");
     }
 
@@ -74,7 +77,7 @@ public class Werkgever extends User{
         setTelefoon(telefoon);
         setEmail(email);
         setAangemeldMetDatum(new Date());
-        setRoll();
+        setRole("WERKGEVER");
         setBedrijf(bedrijf);
     }
     public String getName() {
@@ -89,16 +92,16 @@ public class Werkgever extends User{
         return lastName;
     }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+/*
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -108,6 +111,14 @@ public class Werkgever extends User{
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getRoll() {
+        return role;
+    }
+
+    public void setRoll() {
+        this.role = "WERKGEVER";
+    }*/
 
     public String getTelefoon() {
         return telefoon;
@@ -132,27 +143,19 @@ public class Werkgever extends User{
     public void setAangemeld(String aangemeld) {
         this.aangemeld = aangemeld;
     }
-
     public void setAangemeldMetDatum(Date aangemeld){
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 
         String DateToStr = format.format(aangemeld);
         this.aangemeld = DateToStr;
     }
+
     public int getScore() {
         return score;
     }
 
     public void setScore(int score) {
         this.score = score;
-    }
-
-    public String getRoll() {
-        return role;
-    }
-
-    public void setRoll() {
-        this.role = "WERKGEVER";
     }
 
 

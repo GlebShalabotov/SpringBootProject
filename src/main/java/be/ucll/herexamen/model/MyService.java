@@ -1,6 +1,7 @@
 package be.ucll.herexamen.model;
 
 import be.ucll.herexamen.repositry.JobsRepository;
+import be.ucll.herexamen.repositry.UserRepository;
 import be.ucll.herexamen.repositry.WerkgeverRepository;
 import be.ucll.herexamen.repositry.WerknemerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,9 @@ public class MyService {
     @Autowired
     WerkgeverRepository werkgeverRepository;
 
-    private List<Job> jobs =  new ArrayList<>();
+    @Autowired
+    UserRepository userRepository;
 
-    private List<Werkgever> werkgevers = new ArrayList<>();
-
-    private List<Werknemer> werknemers = new ArrayList<>();
 
 
 
@@ -45,29 +44,6 @@ public class MyService {
         return jobsRepository.findById(id);
     }
 
-    public List<Job> getJobs() {
-        return jobs;
-    }
-
-    public void setJobs(List<Job> jobs) {
-        this.jobs = jobs;
-    }
-
-    public List<Werkgever> getWerkgevers() {
-        return werkgevers;
-    }
-
-    public void setWerkgevers(List<Werkgever> werkgevers) {
-        this.werkgevers = werkgevers;
-    }
-
-    public List<Werknemer> getWerknemers() {
-        return werknemers;
-    }
-
-    public void setWerknemers(List<Werknemer> werknemers) {
-        this.werknemers = werknemers;
-    }
 
     // JOB
     public void addJob(Job job) {
@@ -92,13 +68,7 @@ public class MyService {
         }
     }
 
-    public List<Job> getJobByBeschrijving(String beschrijving) {
-        List<Job> jobsByBeschrijving = new ArrayList<>();
-        for( Job j: jobs ){
-            if(j.getBeschrijving().contains(beschrijving.toLowerCase())) jobsByBeschrijving.add(j);
-        }
-        return jobsByBeschrijving;
-    }
+
 
     public void updateJob(int id, Job changedJob) {
         Job j = getJobById(id);
@@ -129,7 +99,7 @@ public class MyService {
 
     public String findRoleWerknemerByMail(String wnEmail){
         Werknemer wn = werknemerRepository.findByEmail(wnEmail);
-        String role = wn.getRoll();
+        String role = wn.getRole();
         return role;
     }
 
@@ -139,5 +109,16 @@ public class MyService {
 
     public Job getCurrentJobOfWerknemer(Werknemer nm) {
         return nm.getCurrentJob();
+    }
+
+
+    //USER
+    public String findRoleUserByMail(String mail) {
+        User user = userRepository.findByEmail(mail);
+        return user.getRole();
+    }
+
+    public User findUserByMail(String mail) {
+        return  userRepository.findByEmail(mail);
     }
 }

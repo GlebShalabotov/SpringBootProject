@@ -2,6 +2,7 @@ package be.ucll.herexamen.controller;
 
 import be.ucll.herexamen.model.Job;
 import be.ucll.herexamen.model.MyService;
+import be.ucll.herexamen.model.User;
 import be.ucll.herexamen.model.Werknemer;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -32,11 +33,12 @@ public class JobsController implements WebMvcConfigurer{
 
     @GetMapping("/overzicht")
     public String overzicht( Model model) {
+        setUser(model);
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
             String currentUserName = authentication.getName();
             Werknemer nm = myService.findWerknemerByMail(currentUserName);
-            if((nm.getRoll()).equals("WERKNEMER")){
+            if((nm.getRole()).equals("WERKNEMER")){
                 model.addAttribute("jobs", myService.getAllBeschikbareJobs());
                 return "aannemen";}
             }
@@ -46,6 +48,7 @@ public class JobsController implements WebMvcConfigurer{
 
     @GetMapping("/overzicht/details/{id}")
     public String detailsJob(@PathVariable("id") int id, Model model){
+        setUser(model);
         Job job = myService.findJobById(id);
         model.addAttribute("job", job);
         return "details";
@@ -53,10 +56,12 @@ public class JobsController implements WebMvcConfigurer{
 
     @GetMapping("/login")
     public String login(Model model){
+        setUser(model);
         return "login";
     }
     @PostMapping("/toevoegen/add")
     public String nieuweJobToevoegen(Model model, @Valid Job job, BindingResult bindingResult){
+        setUser(model);
         if (bindingResult.hasErrors()) {
             model.addAttribute("errors", bindingResult.getFieldErrors());
             return "toevoegen";
@@ -69,16 +74,19 @@ public class JobsController implements WebMvcConfigurer{
 
     @GetMapping("/toevoegen")
     public String toevoegen(Model model){
+        setUser(model);
         return "toevoegen";
     }
 
     @GetMapping("/aanpassen")
     public String aanpassen(Model model) {
+        setUser(model);
         model.addAttribute("jobs", myService.getAllJobs());
         return "aanpassen";}
 
     @GetMapping("/aanpassen/update/{id}")
     public String updatePageOfJob(@PathVariable("id") int id, Model model){
+        setUser(model);
         Job job = myService.findJobById(id);
         model.addAttribute("oldJob", job);
         return "update";
@@ -86,6 +94,7 @@ public class JobsController implements WebMvcConfigurer{
 
     @PostMapping("/aanpassen/update/{id}")
     public  ModelAndView updateJob(ModelMap model, @Valid Job job, @PathVariable("id") int id,BindingResult bindingResult){
+        setUser(model);
         if (bindingResult.hasErrors()) {
             model.addAttribute("errors", bindingResult.getFieldErrors());
             model.addAttribute("oldJob" ,myService.findJobById(id));
@@ -98,6 +107,7 @@ public class JobsController implements WebMvcConfigurer{
     }
     @GetMapping("/aanpassen/verwijder/{id}")
     public String verwijderJob(@PathVariable("id") int id, Model model){
+        setUser(model);
         Job job = myService.findJobById(id);
         model.addAttribute("job", job);
         return "verwijder";
@@ -105,17 +115,19 @@ public class JobsController implements WebMvcConfigurer{
 
     @GetMapping("/aanpassen/verwijder/bevestigd/{id}")
     public String bevestigVerwijderingVanJob (@PathVariable("id") int id, Model model){
+        setUser(model);
         myService.deleteJobById(id);
         model.addAttribute("jobs", myService.getAllJobs());
         return "overzicht";
     }
 
     @GetMapping("/aannemen/{id}")
-    public ModelAndView jobAannemen(@PathVariable("id") int id, ModelMap model){
+    public ModelAndView jobAannemen(@PathVariable("id") int id, ModelMap model) throws Exception {
+        setUser(model);
 
         Werknemer nm = myService.findWerknemerByMail(getEmailUser());
 
-        if((nm.getRoll()).equals("WERKNEMER")){
+        if((nm.getRole()).equals("WERKNEMER")){
             if(nm.getCurrentJob() == null){
                 String wnEmail = getEmailUser();
                 myService.addJobToWN(wnEmail, id);
@@ -131,12 +143,24 @@ public class JobsController implements WebMvcConfigurer{
 
     @GetMapping("/accesDenied")
     public String error(Model model){
+
+        setUser(model);
         return "accesDenied";
     }
 
     @GetMapping("/huidigejob")
     public String huidigeJob(Model model){
+        setUser(model);
+        Werknemer user = (Werknemer) getCurrentUser();
+        model.addAttribute("job", user.getCurrentJob());
         return "huidigejob";
+    }
+
+    @GetMapping("/profiel")
+    public String  profiel(Model model){
+        setUser(model);
+        model.addAttribute("user", getCurrentUser());
+        return "profiel";
     }
 
     public String getEmailUser(){
@@ -148,9 +172,22 @@ public class JobsController implements WebMvcConfigurer{
 
     public String getUserRole(){
         String mail = getEmailUser();
-        String role = myService.findRoleWerknemerByMail(mail);
+        String role = myService.findRoleUserByMail(mail);
         return role;
     }
 
+    public User getCurrentUser(){
+        String mail = getEmailUser();
+        User user = myService.findUserByMail(mail);
+        return user;
+    }
+
+    public void setUser(Model model){
+        model.addAttribute("user", getCurrentUser());
+    }
+
+    public void setUser(ModelMap model){
+        model.addAttribute("user", getCurrentUser());
+    }
 
 }

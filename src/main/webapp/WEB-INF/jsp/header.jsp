@@ -3,10 +3,12 @@
 <header>
     <nav>
     <ul>
-        <li><a href="/overzicht">Overzicht</a></li>
-        <li><a href="/aanpassen">aanpassen</a></li>
-        <li><a href="/login">logIn</a></li>
+        <li><a href="/overzicht">Overzicht Jobs</a></li>
+        <li><a href="/aanpassen">Aanpassen</a></li>
+        <li><a href="/login">Login</a></li>
         <li><a href="/toevoegen">AddJob</a> </li>
+        <c:if test="${not empty user}">
+            <li><a href="/profiel">profiel</a></li></c:if>
     </ul>
     </nav>
 
