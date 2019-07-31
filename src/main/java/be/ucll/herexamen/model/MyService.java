@@ -119,6 +119,7 @@ public class MyService {
     // WN
     public void addJobToWN(String wnEmail, int id) {
         Werknemer wn = werknemerRepository.findByEmail(wnEmail);
+
         Job j = jobsRepository.findById(id);
         j.setJobStatus("Volzet");
         jobsRepository.save(j);
@@ -130,5 +131,13 @@ public class MyService {
         Werknemer wn = werknemerRepository.findByEmail(wnEmail);
         String role = wn.getRoll();
         return role;
+    }
+
+    public Werknemer findWerknemerByMail(String mail){
+        return werknemerRepository.findByEmail(mail);
+    }
+
+    public Job getCurrentJobOfWerknemer(Werknemer nm) {
+        return nm.getCurrentJob();
     }
 }

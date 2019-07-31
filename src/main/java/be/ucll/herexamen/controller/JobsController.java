@@ -2,15 +2,19 @@ package be.ucll.herexamen.controller;
 
 import be.ucll.herexamen.model.Job;
 import be.ucll.herexamen.model.MyService;
+import be.ucll.herexamen.model.Werknemer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -31,12 +35,11 @@ public class JobsController implements WebMvcConfigurer{
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
             String currentUserName = authentication.getName();
-            if((myService.findRoleWerknemerByMail(currentUserName)).equals("WERKNEMER")){
+            Werknemer nm = myService.findWerknemerByMail(currentUserName);
+            if((nm.getRoll()).equals("WERKNEMER")){
                 model.addAttribute("jobs", myService.getAllBeschikbareJobs());
-                return "aannemen";
+                return "aannemen";}
             }
-        }
-
         model.addAttribute("jobs", myService.getAllJobs());
         return "overzicht";
     }
@@ -82,15 +85,15 @@ public class JobsController implements WebMvcConfigurer{
     }
 
     @PostMapping("/aanpassen/update/{id}")
-    public String updateJob(Model model, @Valid Job job, @PathVariable("id") int id,BindingResult bindingResult){
+    public  ModelAndView updateJob(ModelMap model, @Valid Job job, @PathVariable("id") int id,BindingResult bindingResult){
         if (bindingResult.hasErrors()) {
             model.addAttribute("errors", bindingResult.getFieldErrors());
             model.addAttribute("oldJob" ,myService.findJobById(id));
-            return "update";
+            return new ModelAndView("redirect:/update", model);
         } else {
             myService.updateJob(id, job);
             model.addAttribute("jobs", myService.getAllJobs());
-            return "overzicht";
+            return  new ModelAndView("redirect:/overzicht", model);
         }
     }
     @GetMapping("/aanpassen/verwijder/{id}")
@@ -108,19 +111,46 @@ public class JobsController implements WebMvcConfigurer{
     }
 
     @GetMapping("/aannemen/{id}")
-    public String jobAannemen( @PathVariable("id") int id, Model model){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)) {
-            String wnEmail = authentication.getName();
-            myService.addJobToWN(wnEmail, id);
-        }
+    public ModelAndView jobAannemen(@PathVariable("id") int id, ModelMap model){
 
-        return "overzicht";
+        Werknemer nm = myService.findWerknemerByMail(getEmailUser());
+
+        if((nm.getRoll()).equals("WERKNEMER")){
+            if(nm.getCurrentJob() == null){
+                String wnEmail = getEmailUser();
+                myService.addJobToWN(wnEmail, id);
+                return new ModelAndView("redirect:/overzicht", model);}
+            else{
+                model.addAttribute("job",myService.getCurrentJobOfWerknemer(nm));
+                return new ModelAndView("redirect:/huidigejob", model);
+            }
+        }
+        model.addAttribute("jobs", myService.getAllBeschikbareJobs());
+        return new ModelAndView("redirect:/overzicht", model);
     }
 
     @GetMapping("/accesDenied")
     public String error(Model model){
         return "accesDenied";
     }
+
+    @GetMapping("/huidigejob")
+    public String huidigeJob(Model model){
+        return "huidigejob";
+    }
+
+    public String getEmailUser(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentUserName = authentication.getName();
+        return currentUserName;
+    }
+
+
+    public String getUserRole(){
+        String mail = getEmailUser();
+        String role = myService.findRoleWerknemerByMail(mail);
+        return role;
+    }
+
 
 }

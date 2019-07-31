@@ -36,6 +36,9 @@ public class Werknemer {
 
     public String aangemeld;
 
+    @OneToOne
+    private Job currentJob;
+
     @OneToMany
     @MapKeyColumn(name = "jobID")
     private List<Job> jobs = new ArrayList<>();
@@ -82,6 +85,14 @@ public class Werknemer {
         String DateToStr = format.format(datum);
 
         this.aangemeld = DateToStr;
+    }
+
+    public Job getCurrentJob() {
+        return currentJob;
+    }
+
+    public void setCurrentJob(Job currentJob) {
+        this.currentJob = currentJob;
     }
 
     public String getGeboorteJaar() {
