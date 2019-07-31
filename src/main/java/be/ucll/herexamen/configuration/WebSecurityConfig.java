@@ -42,7 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http ) throws Exception{
 
         http.authorizeRequests()
-                .mvcMatchers("/overzicht", "/h2-console/**").permitAll()
+                .mvcMatchers("/overzicht","/h2-console/*", "/h2-console/**", "h2-console/***").permitAll()
                 .mvcMatchers("/overzicht/details*").hasAnyRole("WERKGEVER", "WERKNEMER")
                 .mvcMatchers("/toevoegen/*").hasAnyRole("WERKGEVER", "WERKNEMER")
                 .mvcMatchers("/toevoegen/add/*").hasRole("WERKNEMER")
@@ -62,7 +62,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .deleteCookies("JSESSIONID")
                 .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler());;
+                .exceptionHandling().accessDeniedHandler(accessDeniedHandler());
         http.csrf().disable();
     }
 

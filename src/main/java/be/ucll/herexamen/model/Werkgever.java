@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-public class Werkgever {
+public class Werkgever extends User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -15,6 +15,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.management.Query;
+
 @SpringBootApplication
 public class Application {
     public static void main(String[] args){
@@ -55,6 +57,8 @@ public class Application {
             werknemerRepository.save(new Werknemer("Luck","Gast", origanal, "20/03/1980","gast@kerel.be", "HBO"));
 
         };
+
+
     }
 
 

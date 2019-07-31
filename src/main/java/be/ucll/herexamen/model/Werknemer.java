@@ -12,7 +12,7 @@ import java.util.*;
 
 @Entity
 
-public class Werknemer {
+public class Werknemer extends User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -195,6 +195,14 @@ public class Werknemer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void addNewCurrentJob(Job j) throws Exception {
+        if (currentJob == null) {
+            setCurrentJob(j);
+            addJob(j);
+        }
+        else throw new Exception("already has a current job");
     }
 
 

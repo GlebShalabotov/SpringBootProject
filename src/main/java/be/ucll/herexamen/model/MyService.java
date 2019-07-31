@@ -117,13 +117,13 @@ public class MyService {
     }
 
     // WN
-    public void addJobToWN(String wnEmail, int id) {
+    public void addJobToWN(String wnEmail, int id) throws Exception {
         Werknemer wn = werknemerRepository.findByEmail(wnEmail);
 
         Job j = jobsRepository.findById(id);
         j.setJobStatus("Volzet");
         jobsRepository.save(j);
-        wn.addJob(j);
+        wn.addNewCurrentJob(j);
         werknemerRepository.save(wn);
     }
 
