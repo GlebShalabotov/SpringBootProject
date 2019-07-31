@@ -11,6 +11,6 @@ public interface JobsRepository extends JpaRepository<Job, Integer> {
 
     List<Job> findByWerkgever (String werkgever);
     List<Job> getByWerkgever (String werkgever);
-
+    List<Job> findByJobStatus(String jobStatus);
     Job findById(int id);
 }

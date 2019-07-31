@@ -13,6 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @org.springframework.stereotype.Service
 public class MyService {
 
+
     @Autowired
     JobsRepository jobsRepository;
 
@@ -41,12 +42,7 @@ public class MyService {
     }
 
     public Job getJobById(int id) {
-        for ( Job j: jobs){
-            if (j.getId()== id){
-                return j;
-            }
-        }
-        throw new NullPointerException();
+        return jobsRepository.findById(id);
     }
 
     public List<Job> getJobs() {
@@ -83,6 +79,10 @@ public class MyService {
         return jobsRepository.findAll();
     }
 
+    public List <Job> getAllBeschikbareJobs(){
+        return jobsRepository.findByJobStatus("Beschikbaar");
+    }
+
     // WG
     private void addWerkgever(Werkgever werkgever) {
 
@@ -100,12 +100,35 @@ public class MyService {
         return jobsByBeschrijving;
     }
 
-    public Job updateJob(int id, Job changedJob) {
+    public void updateJob(int id, Job changedJob) {
         Job j = getJobById(id);
         j.updateJob(changedJob);
-        return j;
+        jobsRepository.save(j);
+    }
+
+    public void updateJobZonderId(Job job){
+        jobsRepository.save(job);
     }
 
 
+    public void deleteJobById(int id) {
+        Job j = getJobById(id);
+        jobsRepository.delete(j);
+    }
 
+    // WN
+    public void addJobToWN(String wnEmail, int id) {
+        Werknemer wn = werknemerRepository.findByEmail(wnEmail);
+        Job j = jobsRepository.findById(id);
+        j.setJobStatus("Volzet");
+        jobsRepository.save(j);
+        wn.addJob(j);
+        werknemerRepository.save(wn);
+    }
+
+    public String findRoleWerknemerByMail(String wnEmail){
+        Werknemer wn = werknemerRepository.findByEmail(wnEmail);
+        String role = wn.getRoll();
+        return role;
+    }
 }

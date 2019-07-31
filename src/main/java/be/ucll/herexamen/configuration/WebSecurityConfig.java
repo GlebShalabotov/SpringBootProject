@@ -1,5 +1,6 @@
 package be.ucll.herexamen.configuration;
 
+import be.ucll.herexamen.CustomAccessDeniedHandler;
 import org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,12 +18,18 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.web.access.AccessDeniedHandler;
 
 import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Bean
+    public AccessDeniedHandler accessDeniedHandler(){
+        return new CustomAccessDeniedHandler();
+    }
 
     @Autowired
     private DataSource dataSource;
@@ -37,8 +44,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .mvcMatchers("/overzicht", "/h2-console/**").permitAll()
                 .mvcMatchers("/overzicht/details*").hasAnyRole("WERKGEVER", "WERKNEMER")
-                .mvcMatchers("/toevoegen").hasRole("WERKGEVER")
+                .mvcMatchers("/toevoegen/*").hasAnyRole("WERKGEVER", "WERKNEMER")
+                .mvcMatchers("/toevoegen/add/*").hasRole("WERKNEMER")
                 .mvcMatchers("/console/**").permitAll()
+               /* .mvcMatchers("/aannemen/**").hasRole("WERKNEMER")
+                .mvcMatchers("/aannemen/*").hasRole("WERKNEMER")*/
+                .mvcMatchers("/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -48,7 +59,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutSuccessUrl("/overzicht")
-                .permitAll();
+                .permitAll()
+                .deleteCookies("JSESSIONID")
+                .and()
+                .exceptionHandling().accessDeniedHandler(accessDeniedHandler());;
         http.csrf().disable();
     }
 

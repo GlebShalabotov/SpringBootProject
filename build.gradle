@@ -100,7 +100,7 @@ dependencies {
     // needed because we use jsp
     // compile group: 'org.eclipse.jdt.core.compiler', name: 'ecj', version: '4.4.2'
     compile group: 'org.eclipse.jdt.core.compiler', name: 'ecj', version: ecjVersion
-
+    compile "org.thymeleaf.extras:thymeleaf-extras-springsecurity4:*"
     // for testing
     testCompile('org.springframework.boot:spring-boot-starter-test')
     // for testing

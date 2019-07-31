@@ -10,7 +10,6 @@ import java.util.List;
 @Repository
 public interface WerkgeverRepository extends JpaRepository<Werkgever, Integer> {
 
-    public Werkgever findByName(String name);
     public Werkgever findByEmail(String email);
 
 

@@ -1,4 +1,8 @@
 package be.ucll.herexamen.model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -27,8 +31,10 @@ public class Job {
     @NotEmpty
     private String details;
 
-    @NotNull
+
     @ManyToOne(cascade = CascadeType.DETACH)
+    @Convert(converter = Werkgever.class)
+    @JsonIgnore
     private Werkgever werkgever;
 
    /* @ManyToOne(cascade = CascadeType.DETACH)
@@ -44,6 +50,22 @@ public class Job {
         setDuur(duur);
         setDetails(details);
         setWerkgever(werkgever);
+        setDatum(new Date());
+        setJobStatus("Beschikbaar");
+    }
+
+    public Job(String beschrijving, String duur, String details, String beschikbaar, Werkgever werkgever){
+        setBeschrijving(beschrijving);
+        setDuur(duur);
+        setDetails(details);
+        setWerkgever(werkgever);
+        setDatum(new Date());
+        setJobStatus(beschikbaar);
+    }
+    public Job(String beschrijving, String duur, String details){
+        setBeschrijving(beschrijving);
+        setDuur(duur);
+        setDetails(details);
         setDatum(new Date());
         setJobStatus("Beschikbaar");
     }
@@ -125,6 +147,9 @@ public class Job {
         setBeschrijving(job.getBeschrijving());
         setDuur(job.getDuur());
         setDetails(job.getDetails());
+        setJobStatus(job.jobStatus);
         /*setWerkgever(job.getWerkgever());*/
     }
+
+
 }

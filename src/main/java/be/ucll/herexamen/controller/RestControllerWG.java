@@ -9,4 +9,5 @@ public class RestControllerWG {
 
     @Autowired
     public MyService wgService;
+
 }
