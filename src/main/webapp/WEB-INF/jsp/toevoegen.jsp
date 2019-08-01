@@ -1,5 +1,4 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,11 +52,11 @@
     </div>
     <div>
         <label>Details</label>
-        <input type="text" name="deatails"/>
+        <input type="text" name="details"/>
     </div>
     <div>
-        <button type="reset">Cancel</button>
         <button type="submit">Post</button>
+        <button type="reset">Cancel</button>
     </div>
 </form>
 

@@ -30,8 +30,9 @@
             <td>${job.duur}</td>
             <td>${job.werkgever.name}</td>
             <td>${job.datum}</td>
-<td><a href="/overzicht/details/${job.id}">details</a></td>
-</tr>
+            <td>${job.jobStatus}</td>
+            <td><a href="/overzicht/details/${job.id}">details</a></td>
+        </tr>
 </c:forEach>
 </tbody>
 </table>

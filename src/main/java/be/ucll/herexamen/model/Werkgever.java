@@ -1,5 +1,7 @@
 package be.ucll.herexamen.model;
 
+import org.springframework.data.annotation.Transient;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -45,7 +47,8 @@ public class Werkgever extends User{
 
     private String bedrijf;
 
-    private int score;
+    private double score;
+
 
 
     /*@OneToMany(cascade = CascadeType.ALL)
@@ -55,7 +58,7 @@ public class Werkgever extends User{
         jobs.add(job);
     }*/
     public Werkgever(){
-        setRole("WERKGEVER");
+        setRole("ROLE_WERKGEVER");
     }
 
 
@@ -66,7 +69,7 @@ public class Werkgever extends User{
         setTelefoon(telefoon);
         setEmail(email);
         setAangemeldMetDatum(new Date());
-        setRole("WERKGEVER");
+        setRole("ROLE_WERKGEVER");
         setBedrijf("NVT");
     }
 
@@ -77,7 +80,7 @@ public class Werkgever extends User{
         setTelefoon(telefoon);
         setEmail(email);
         setAangemeldMetDatum(new Date());
-        setRole("WERKGEVER");
+        setRole("ROLE_WERKGEVER");
         setBedrijf(bedrijf);
     }
     public String getName() {
@@ -150,12 +153,17 @@ public class Werkgever extends User{
         this.aangemeld = DateToStr;
     }
 
-    public int getScore() {
+
+    public double getScore() {
+
         return score;
     }
 
     public void setScore(int score) {
-        this.score = score;
+       this.score = score;
+
+
+
     }
 
 

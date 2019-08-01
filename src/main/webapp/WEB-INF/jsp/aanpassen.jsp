@@ -30,6 +30,7 @@
 
             <td> <a href="/aanpassen/update/${job.id}"> Update </a> </td>
             <td> <a href="/aanpassen/verwijder/${job.id}"> Verwijder</a></td>
+
         </tr>
     </c:forEach>
     </tbody>

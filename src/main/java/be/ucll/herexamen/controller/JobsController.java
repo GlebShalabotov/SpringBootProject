@@ -1,9 +1,6 @@
 package be.ucll.herexamen.controller;
 
-import be.ucll.herexamen.model.Job;
-import be.ucll.herexamen.model.MyService;
-import be.ucll.herexamen.model.User;
-import be.ucll.herexamen.model.Werknemer;
+import be.ucll.herexamen.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -33,17 +30,26 @@ public class JobsController implements WebMvcConfigurer{
 
     @GetMapping("/overzicht")
     public String overzicht( Model model) {
+
         setUser(model);
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)) {
-            String currentUserName = authentication.getName();
-            Werknemer nm = myService.findWerknemerByMail(currentUserName);
-            if((nm.getRole()).equals("WERKNEMER")){
-                model.addAttribute("jobs", myService.getAllBeschikbareJobs());
-                return "aannemen";}
+        User user = getCurrentUser();
+        if (user != null){
+            if (user.getRole().equals("ROLE_WERKGEVER")){
+                Werkgever wg = (Werkgever) user;
+
+                model.addAttribute("user", getCurrentUser());
+
             }
+            else{
+                Werknemer wn = (Werknemer) user;
+                model.addAttribute("jobs", myService.getAllBeschikbareJobs());
+                model.addAttribute("user", getCurrentUser());
+                return "aannemen";
+            }
+        }
         model.addAttribute("jobs", myService.getAllJobs());
         return "overzicht";
+
     }
 
     @GetMapping("/overzicht/details/{id}")
@@ -66,8 +72,8 @@ public class JobsController implements WebMvcConfigurer{
             model.addAttribute("errors", bindingResult.getFieldErrors());
             return "toevoegen";
         } else {
-            myService.addJob(job);
-            model.addAttribute("courses", myService.getAllJobs());
+            myService.addJob(job, (Werkgever) getCurrentUser());
+            model.addAttribute("jobs", myService.getAllJobs());
             return "overzicht";
         }
     }
@@ -114,11 +120,11 @@ public class JobsController implements WebMvcConfigurer{
     }
 
     @GetMapping("/aanpassen/verwijder/bevestigd/{id}")
-    public String bevestigVerwijderingVanJob (@PathVariable("id") int id, Model model){
+    public ModelAndView bevestigVerwijderingVanJob (@PathVariable("id") int id, ModelMap model){
         setUser(model);
         myService.deleteJobById(id);
         model.addAttribute("jobs", myService.getAllJobs());
-        return "overzicht";
+        return new ModelAndView("redirect:/overzicht", model);
     }
 
     @GetMapping("/aannemen/{id}")
@@ -127,7 +133,7 @@ public class JobsController implements WebMvcConfigurer{
 
         Werknemer nm = myService.findWerknemerByMail(getEmailUser());
 
-        if((nm.getRole()).equals("WERKNEMER")){
+        if((nm.getRole()).equals("ROLE_WERKNEMER")){
             if(nm.getCurrentJob() == null){
                 String wnEmail = getEmailUser();
                 myService.addJobToWN(wnEmail, id);
@@ -159,8 +165,34 @@ public class JobsController implements WebMvcConfigurer{
     @GetMapping("/profiel")
     public String  profiel(Model model){
         setUser(model);
+        User user = getCurrentUser();
+        if (user.getRole().equals("ROLE_WERKGEVER")){
+            Werkgever wg = (Werkgever) user;
+            model.addAttribute("jobs", myService.findAllJobsOfWG(wg));
+        }
+        else{
+            Werknemer wn = (Werknemer) user;
+            model.addAttribute("jobs", myService.getAllJobsWN(wn));
+            model.addAttribute("huidigejob", myService.getCurrentJobOfWerknemer(wn));
+        }
         model.addAttribute("user", getCurrentUser());
         return "profiel";
+    }
+
+    @GetMapping("/overzicht/finish/{id}")
+    public String jobAfwerkenEnRating(@PathVariable("id") int id, ModelMap model){
+        setUser(model);
+        Werknemer user = (Werknemer) getCurrentUser();
+        model.addAttribute("job", user.getCurrentJob());
+        return "voltooien";
+
+    }
+
+    @PostMapping("/overzicht/finish/{id}")
+    public ModelAndView jobAfwerkenEnScoreGeven( @RequestParam(value = "score") int score, @PathVariable("id") int id, ModelMap model){
+        setUser(model);
+        myService.updateJobScoreAndResetCurrentJob(id, score, getCurrentUser());
+        return new ModelAndView("redirect:/overzicht", model);
     }
 
     public String getEmailUser(){

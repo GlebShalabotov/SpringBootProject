@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="nl">
 <head>
@@ -14,7 +15,7 @@
 <main>
     <p>${job.details}</p>
     <div>${job.werkgever.name} ${job.werkgever.lastName} ${job.werkgever.telefoon}</div>
-    <a href="/aannemen/${job.id}">Deze job aannemen</a>
+    <c:if test="${user.role == 'ROLE_WERKNEMER'}"> <a href="/aannemen/${job.id}">Deze job aannemen</a></c:if>
 </main>
 
 </body>

@@ -46,8 +46,8 @@ public class MyService {
 
 
     // JOB
-    public void addJob(Job job) {
-        addWerkgever(job.getWerkgever());
+    public void addJob(Job job, Werkgever currentUser) {
+        job.setWerkgever(currentUser);
         jobsRepository.save(job);
     }
 
@@ -59,6 +59,9 @@ public class MyService {
         return jobsRepository.findByJobStatus("Beschikbaar");
     }
 
+    public List <Job> findAllJobsOfWG(Werkgever wg){
+        return jobsRepository.findAllByWerkgeverId( wg.getId());
+    }
     // WG
     private void addWerkgever(Werkgever werkgever) {
 
@@ -86,6 +89,7 @@ public class MyService {
         jobsRepository.delete(j);
     }
 
+
     // WN
     public void addJobToWN(String wnEmail, int id) throws Exception {
         Werknemer wn = werknemerRepository.findByEmail(wnEmail);
@@ -111,6 +115,9 @@ public class MyService {
         return nm.getCurrentJob();
     }
 
+     public List<Job> getAllJobsWN(Werknemer wn){
+        return wn.getJobs();
+     }
 
     //USER
     public String findRoleUserByMail(String mail) {
@@ -120,5 +127,31 @@ public class MyService {
 
     public User findUserByMail(String mail) {
         return  userRepository.findByEmail(mail);
+    }
+
+
+    public void updateJobScoreAndResetCurrentJob(int id, int scoreJob, User user) {
+        Werknemer wg = (Werknemer) user;
+        wg.setCurrentJob(null);
+        werknemerRepository.save(wg);
+        Job j = jobsRepository.findById(id);
+        j.setJobStatus("Voltooid");
+        j.setScore(scoreJob);
+        jobsRepository.save(j);
+        berekenScoreWerkgever(j.getWerkgever().getEmail());
+    }
+
+    private void berekenScoreWerkgever(String email) {
+        Werkgever wg = werkgeverRepository.findByEmail(email);
+        List<Job> jobs = jobsRepository.findAllByWerkgeverId(wg.getId());
+        int totaalscore = 0;
+        for (Job j : jobs){
+            totaalscore += j.getScore();
+        }
+        totaalscore /= jobs.size();
+
+        wg.setScore(totaalscore);
+
+        werkgeverRepository.save(wg);
     }
 }

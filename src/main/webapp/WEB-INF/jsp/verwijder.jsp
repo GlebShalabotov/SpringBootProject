@@ -26,11 +26,11 @@
         <td>${job.duur}</td>
         <td>${job.werkgever.name} ${job.werkgever.lastName}</td>
         <td>${job.datum}</td>
-        <td>${job.status}</td>
+        <td>${job.jobStatus}</td>
     <tr>
 
     <div>
-        <a href="/aanpassen/verwijder/bevestigd/{id}">Yes</a>
+        <a href="/aanpassen/verwijder/bevestigd/${job.id}">Yes</a>
         <a href="/overzicht">No</a>
     </div>
 </main>

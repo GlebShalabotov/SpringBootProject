@@ -29,6 +29,7 @@
             <td>${job.werkgever.name}</td>
             <td>${job.datum}</td>
             <td><a href="/overzicht/details/${job.id}">details</a></td>
+            <td><a href="/overzicht/finish/${job.id}">afwerken</a></td>
         </tr>
         </tbody>
     </table>

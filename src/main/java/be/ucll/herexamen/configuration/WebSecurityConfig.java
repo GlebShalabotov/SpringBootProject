@@ -5,6 +5,7 @@ import org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProvid
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -42,14 +43,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http ) throws Exception{
 
         http.authorizeRequests()
-                .mvcMatchers("/overzicht","/h2-console/*", "/h2-console/**", "h2-console/***").permitAll()
-                .mvcMatchers("/overzicht/details*").hasAnyRole("WERKGEVER", "WERKNEMER")
-                .mvcMatchers("/toevoegen/*").hasAnyRole("WERKGEVER", "WERKNEMER")
-                .mvcMatchers("/toevoegen/add/*").hasRole("WERKNEMER")
-                .mvcMatchers("/console/**").permitAll()
-               /* .mvcMatchers("/aannemen/**").hasRole("WERKNEMER")
-                .mvcMatchers("/aannemen/*").hasRole("WERKNEMER")*/
-                .mvcMatchers("/*").permitAll()
+                .mvcMatchers("/overzicht", "/", "/index").permitAll()
+                .mvcMatchers("/overzicht/details*","/h2-console/*", "/h2-console/**", "h2-console/***", "/profiel").hasAnyRole("WERKGEVER", "WERKNEMER")
+                .mvcMatchers("/toevoegen/*").hasRole("WERKGEVER")
+                .mvcMatchers("/toevoegen/add","/toevoegen/add/*","/toevoegen/add/**", "/toevoegen/add/***").hasRole("WERKGEVER")
+                .mvcMatchers(HttpMethod.POST, "/toevoegen/add").hasRole("WERKGEVER")
+                .mvcMatchers("/aannemen", "/aannemen/*" ,"/aannemen/**", "/aannemen/***").hasRole("WERKNEMER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

@@ -85,7 +85,7 @@ public class Werknemer extends User {
     private int leeftijd;
 
     public Werknemer(){
-        setRole("WERKNEMER");
+        setRole("ROLE_WERKNEMER");
     }
 
     public Werknemer(String name, String lastName, String pw, String geboorteJaar, String email, String cv) throws ParseException {
@@ -95,7 +95,7 @@ public class Werknemer extends User {
         setEmail(email);
         setCv(cv);
         setDatum(new Date());
-        setRole("WERKNEMER");
+        setRole("ROLE_WERKNEMER");
         setGeboorteJaar(geboorteJaar);
         setLeeftijd(calculateAge(geboorteJaar));
     }
@@ -108,7 +108,7 @@ public class Werknemer extends User {
         setCv(cv);
         addJob(job);
         setDatum(new Date());
-        setRole("WERKNEMER");
+        setRole("ROLE_WERKNEMER");
         setGeboorteJaar(geboorteJaar);
         setLeeftijd(calculateAge(geboorteJaar));
     }
@@ -202,7 +202,6 @@ public class Werknemer extends User {
     public void addNewCurrentJob(Job j) throws Exception {
         if (currentJob == null) {
             setCurrentJob(j);
-            addJob(j);
         }
         else throw new Exception("already has a current job");
     }

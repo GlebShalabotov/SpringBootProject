@@ -37,11 +37,22 @@ public class Job {
     @JsonIgnore
     private Werkgever werkgever;
 
-   /* @ManyToOne(cascade = CascadeType.DETACH)
+
+    private int score;
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+    /* @ManyToOne(cascade = CascadeType.DETACH)
     private Werknemer werknemer;*/
 
     public Job(){
         setDatum(new Date());
+        setJobStatus("Beschikbaar");
     }
 
 

@@ -53,7 +53,7 @@ public class Application {
             PasswordEncoder encoder = new BCryptPasswordEncoder();
             String ww = "pw";
             String origanal = encoder.encode(ww);
-            werknemerRepository.save(new Werknemer("jan","DeManDieAllesKan", origanal, "20/03/2000", "jan@deman.be", "ict", jobsRepository.findById(2)));
+            werknemerRepository.save(new Werknemer("Jan","DeManDieAllesKan", origanal, "20/03/2000", "jan@deman.be", "ict", jobsRepository.findById(2)));
             werknemerRepository.save(new Werknemer("Luck","Gast", origanal, "20/03/1980","gast@kerel.be", "HBO"));
 
         };
