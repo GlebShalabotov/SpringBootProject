@@ -3,23 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12cb581a-bc78-4624-b408-83620c76e4b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werkgever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werkgever.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werknemer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werknemer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/WerknemerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/WerknemerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -59,9 +43,9 @@
           <entry key="Bat" value="2" />
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="8" />
-          <entry key="JAVA" value="192" />
+          <entry key="JAVA" value="194" />
           <entry key="JSON" value="1" />
-          <entry key="JSP" value="84" />
+          <entry key="JSP" value="85" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="9" />
           <entry key="XML" value="1" />
@@ -70,7 +54,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="23" />
-          <entry key="JAVA" value="15903" />
+          <entry key="JAVA" value="15921" />
           <entry key="JSP" value="3849" />
           <entry key="PLAIN_TEXT" value="21" />
           <entry key="Properties" value="27" />
@@ -85,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="126" column="62" lean-forward="true" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
+            <state relative-caret-position="-442">
+              <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#7139#7140#0" expanded="true" />
@@ -106,15 +90,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aannemen.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -144,6 +119,24 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.0.8.RELEASE/cdfd519782c9f02718d6a8b7ad6dc296588569c6/spring-security-config-5.0.8.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/configurers/FormLoginConfigurer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="228" column="34" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobsRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -169,15 +162,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -187,10 +171,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="31" selection-end-column="77" />
+            <state relative-caret-position="17">
+              <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -653,7 +637,6 @@
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/WerknemerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werknemer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobScoreRepository.java" />
@@ -670,6 +653,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -822,7 +806,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564674121780" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564675610777" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ArneVandoorslaerIPGerechten" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -886,12 +870,12 @@
       <workItem from="1564478786807" duration="19000" />
       <workItem from="1564478833399" duration="6325000" />
       <workItem from="1564559278101" duration="23968000" />
-      <workItem from="1564641453389" duration="22493000" />
+      <workItem from="1564641453389" duration="23456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148755000" />
+    <option name="totallyTimeSpent" value="149718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -906,7 +890,7 @@
     <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -929,7 +913,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4986577" visible="true" weight="0.3434453" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4986577" visible="true" weight="0.3434453" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -950,13 +934,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.0.8.RELEASE/cdfd519782c9f02718d6a8b7ad6dc296588569c6/spring-security-config-5.0.8.RELEASE-sources.jar!/org/springframework/security/config/annotation/authentication/configurers/provisioning/JdbcUserDetailsManagerConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="107" column="47" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
@@ -1110,13 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/WerkgeverRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1135,13 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1269,13 +1232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -1287,17 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="109" column="93" selection-start-line="109" selection-start-column="93" selection-end-line="109" selection-end-column="93" />
-          <folding>
-            <element signature="n#c:otherwise#0;n#c:choose#0;n#c:if#0;n#jsp:root#0;n#!!top" />
-            <element signature="n#c:choose#1;n#c:if#0;n#jsp:root#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1345,10 +1290,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="109" column="93" selection-start-line="109" selection-start-column="93" selection-end-line="109" selection-end-column="93" />
+          <folding>
+            <element signature="n#c:otherwise#0;n#c:choose#0;n#c:if#0;n#jsp:root#0;n#!!top" />
+            <element signature="n#c:choose#1;n#c:if#0;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="126" column="62" lean-forward="true" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
+        <state relative-caret-position="-442">
+          <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#7139#7140#0" expanded="true" />
@@ -1356,6 +1326,20 @@
             <element signature="e#6921#6922#0" expanded="true" />
             <element signature="e#6981#6982#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.0.8.RELEASE/cdfd519782c9f02718d6a8b7ad6dc296588569c6/spring-security-config-5.0.8.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/configurers/FormLoginConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="228" column="34" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
         </state>
       </provider>
     </entry>
