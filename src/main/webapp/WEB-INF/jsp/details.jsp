@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!doctype html>
 <html lang="nl">
 <head>
@@ -10,7 +11,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<h2>Details job</h2>
+<h2><spring:message code="language.details"/></h2>
 
 <main>
     <p>${job.details}</p>

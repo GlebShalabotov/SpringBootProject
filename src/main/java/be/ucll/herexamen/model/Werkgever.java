@@ -3,8 +3,7 @@ package be.ucll.herexamen.model;
 import org.springframework.data.annotation.Transient;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -46,6 +45,8 @@ public class Werkgever extends User{
 
     private String bedrijf;
 
+    @DecimalMax(value = "5.0", message = "Score can't be higher than 5")
+    @DecimalMin(value = "0.0", message = "Score can't be lower than 0")
     private int score;
 
 

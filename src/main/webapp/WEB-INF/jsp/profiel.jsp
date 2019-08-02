@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!doctype html>
 <html lang="nl">
 <head>
@@ -26,11 +27,13 @@
                 <h2>Uw momentele job</h2>
                 <table>
                     <thead>
-                    <th>Beschrijving</th>
-                    <th>Duur</th>
-                    <th>werkgever</th>
-                    <th>datum</th>
-                    <th>details job</th>
+
+                    <th><spring:message code="language.beschrijving"/></th>
+                    <th><spring:message code="language.duur"/></th>
+                    <th><spring:message code="language.werkgever"/></th>
+                    <th><spring:message code="language.datum"/></th>
+                    <th><spring:message code="language.details"/></th>
+
                     </thead>
                     <tbody>
                     <tr>
@@ -38,8 +41,10 @@
                         <td>${huidigejob.duur}</td>
                         <td>${huidigejob.werkgever.name}</td>
                         <td>${huidigejob.datum}</td>
-                        <td><a href="/overzicht/details/${huidigejob.id}">details</a></td>
-                        <td><a href="/overzicht/finish/${huidigejob.id}">afwerken</a></td>
+                        <td><a href="/overzicht/details/${huidigejob.id}"><spring:message code="language.details"/></a></td>
+                        <td><a href="/overzicht/finish/${huidigejob.id}">finish</a></td>
+
+
                     </tr>
                     </tbody>
                 </table>
@@ -89,12 +94,12 @@
                 <h2>Dit zijn uw geposte jobs</h2>
                 <table>
                     <thead>
-                    <th>Beschrijving</th>
-                    <th>Duur</th>
-                    <th>werkgever</th>
-                    <th>datum</th>
-                    <th>Job Status</th>
-                    <th>details job</th>
+
+                    <th><spring:message code="language.beschrijving"/></th>
+                    <th><spring:message code="language.duur"/></th>
+                    <th><spring:message code="language.werkgever"/></th>
+                    <th><spring:message code="language.datum"/></th>
+                    <th><spring:message code="language.details"/></th>
 
                     </thead>
                     <tbody>

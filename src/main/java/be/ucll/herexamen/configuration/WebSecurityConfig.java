@@ -43,7 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http ) throws Exception{
 
         http.authorizeRequests()
-                .mvcMatchers("/overzicht", "/", "/index").permitAll()
+                .mvcMatchers("/overzicht", "/", "/index", "/login").permitAll()
                 .mvcMatchers("/overzicht/details*","/h2-console/*", "/h2-console/**", "h2-console/***", "/profiel").hasAnyRole("WERKGEVER", "WERKNEMER")
                 .mvcMatchers("/toevoegen/*").hasRole("WERKGEVER")
                 .mvcMatchers("/toevoegen/add","/toevoegen/add/*","/toevoegen/add/**", "/toevoegen/add/***").hasRole("WERKGEVER")
@@ -63,7 +63,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .deleteCookies("JSESSIONID")
                 .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler());
+                .exceptionHandling().accessDeniedPage("/accesDenied");
         http.csrf().disable();
         http.headers().frameOptions().disable();
     }
@@ -83,11 +83,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         PasswordEncoder encoder = new BCryptPasswordEncoder();
         return encoder;    }
-   /* @Bean
-    @Override
-    public UserDetailsService userDetailsService(){
-        UserDetails user = User.withDefaultPasswordEncoder().username("Elise").password("password").roles("WERKGEVER").build();
 
-        return new InMemoryUserDetailsManager(user);
-    }*/
 }

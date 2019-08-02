@@ -11,6 +11,6 @@
 </head>
 <body>
     <jsp:include page="header.jsp"/>
-    <p> vind de job die bij jou past</p>
+    <h1>Vind de job die bij jouw past</h1>
 </body>
 </html>

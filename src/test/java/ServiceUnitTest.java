@@ -2,9 +2,13 @@ import be.ucll.herexamen.model.Job;
 import be.ucll.herexamen.model.MyService;
 import be.ucll.herexamen.model.Werkgever;
 import be.ucll.herexamen.repositry.JobsRepository;
+import be.ucll.herexamen.repositry.UserRepository;
+import be.ucll.herexamen.repositry.WerkgeverRepository;
+import be.ucll.herexamen.repositry.WerknemerRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -35,16 +39,37 @@ public class ServiceUnitTest {
     @MockBean
     private JobsRepository jobsRepository;
 
-    private Job okJob, nOKjob, maybeOKJob;
-    private List<Job> jobs;
+    @MockBean
+    private WerknemerRepository werknemerRepository;
+
+    @MockBean
+    private WerkgeverRepository werkgeverRepository;
+
+    @MockBean
+    private UserRepository userRepository;
+
+    private Job okJob, nOKjob, anotherOKJob, maybeOKJob;
+    private List<Job> jobs,beschikbareJobs,glebsJobs;
 
     @Before
     public void setUp() {
         okJob = JobBuilder.anOKJob().build();
         nOKjob = JobBuilder.nOKJob().build();
+        anotherOKJob = JobBuilder.anOtherOKJob().build();
         jobs = new ArrayList<Job>();
         jobs.add(okJob);
         jobs.add(nOKjob);
+        jobs.add(anotherOKJob);
+        beschikbareJobs = new ArrayList<Job>();
+        glebsJobs = new ArrayList<Job>();
+
+        for(Job j:jobs){
+            if(j.getJobStatus() != null){
+                if(j.getJobStatus().equals("beschikbaar")) beschikbareJobs.add(j);
+            }
+            if(j.getWerkgever().getId()== 2) glebsJobs.add(j);
+        }
+
 
     }
 
@@ -73,4 +98,51 @@ public class ServiceUnitTest {
     }
 
 
+    @Test
+    public void job_is_added_when_al_values_are_correct(){
+        Mockito.when(jobsRepository.save(okJob)).thenReturn(okJob);
+
+        Job job = myService.addJob(okJob);
+
+        assertThat(job.getJobStatus()).isEqualTo(okJob.getJobStatus());
+        assertThat(job.getDatum()).isEqualTo(okJob.getDatum());
+        assertThat(job.getBeschrijving()).isEqualTo(okJob.getBeschrijving());
+
+    }
+
+    @Test
+    public void should_find_all_jobs(){
+        Mockito.when(jobsRepository.findAll()).thenReturn(jobs);
+
+        List<Job> foundedJobs = jobsRepository.findAll();
+
+        assertThat(foundedJobs.size()).isEqualTo(3);
+        assertThat(foundedJobs).contains(anotherOKJob);
+        assertThat(foundedJobs).contains(nOKjob);
+        assertThat(foundedJobs).contains(okJob);
+
+    }
+
+
+    @Test
+    public void should_find_all_beschikbare_jobs(){
+        Mockito.when(jobsRepository.findByJobStatus("beschikbaar")).thenReturn(beschikbareJobs);
+
+        List<Job> foundedBeschikbareJobs = jobsRepository.findByJobStatus("beschikbaar");
+
+        assertThat(foundedBeschikbareJobs).contains(okJob);
+        assertThat(foundedBeschikbareJobs).contains(anotherOKJob);
+        assertThat(foundedBeschikbareJobs).doesNotContain(nOKjob);
+    }
+
+
+    @Test
+    public void should_find_all_jobs_of_werkgever(){
+        Mockito.when(jobsRepository.findAllByWerkgeverId(2)).thenReturn(glebsJobs);
+
+        List<Job> foundenWGJobs = jobsRepository.findAllByWerkgeverId(2);
+
+        assertThat(foundenWGJobs).contains(okJob);
+        assertThat(foundenWGJobs).doesNotContain(nOKjob);
+    }
 }

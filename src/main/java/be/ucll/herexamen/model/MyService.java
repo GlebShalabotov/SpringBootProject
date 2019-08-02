@@ -38,30 +38,33 @@ public class MyService {
     public MyService() {
 
     }
-
+    // JOB
+    //tested
     public Job findJobById(int id){
         return jobsRepository.findById(id);
     }
 
-    public Job getJobById(int id) {
-        return jobsRepository.findById(id);
-    }
-
-
-    // JOB
-    public void addJob(Job job, Werkgever currentUser) {
+    //tested
+    public Job addJob(Job job, Werkgever currentUser) {
         job.setWerkgever(currentUser);
-        jobsRepository.save(job);
+        return jobsRepository.save(job);
+    }
+    //tested
+    public Job addJob(Job job) {
+        return jobsRepository.save(job);
     }
 
+    //tesed
     public List<Job> getAllJobs() {
         return jobsRepository.findAll();
     }
 
+    //tested
     public List <Job> getAllBeschikbareJobs(){
         return jobsRepository.findByJobStatus("Beschikbaar");
     }
 
+    //tesed
     public List <Job> findAllJobsOfWG(Werkgever wg){
         return jobsRepository.findAllByWerkgeverId( wg.getId());
     }
@@ -90,7 +93,7 @@ public class MyService {
 
 
     public void updateJob(int id, Job changedJob) {
-        Job j = getJobById(id);
+        Job j = findJobById(id);
         j.updateJob(changedJob);
         jobsRepository.save(j);
     }
@@ -101,7 +104,7 @@ public class MyService {
 
 
     public void deleteJobById(int id) {
-        Job j = getJobById(id);
+        Job j = findJobById(id);
         jobsRepository.delete(j);
     }
 

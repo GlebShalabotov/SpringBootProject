@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!doctype html>
 <html lang="nl">
 <head>
@@ -12,10 +13,10 @@
 <jsp:include page="header.jsp"/>
 <table>
     <thead>
-    <th>Beschrijving</th>
-    <th>Duur</th>
-    <th>werkgever</th>
-    <th>datum</th>
+    <th><spring:message code="language.beschrijving"/></th>
+    <th><spring:message code="language.duur"/></th>
+    <th><spring:message code="language.werkgever"/></th>
+    <th><spring:message code="language.datum"/></th>
 
 
     </thead>
@@ -29,7 +30,7 @@
 
 
             <td> <a href="/aanpassen/update/${job.id}"> Update </a> </td>
-            <td> <a href="/aanpassen/verwijder/${job.id}"> Verwijder</a></td>
+            <td> <a href="/aanpassen/verwijder/${job.id}"> Delete</a></td>
 
         </tr>
     </c:forEach>

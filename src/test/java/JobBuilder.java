@@ -25,28 +25,34 @@ public class JobBuilder {
         return new JobBuilder();
     }
     public static JobBuilder anOKJob(){
-        PasswordEncoder encoder = new BCryptPasswordEncoder();
-        String ww = "pw";
-        String origenal = encoder.encode(ww);
+        Werkgever wg = WerkgeverBuilder.anOKWerkgever().build();
         return aJob().withId(2)
                 .withBeschrijving("Sales Manager")
                 .withDuur("vast")
                 .withDatum(new Date())
                 .withJobStatus("beschikbaar")
                 .withDetails("+20jaar")
-                .withWerkgever(new Werkgever("Elise", "De Craene", origenal, "elise@lol.be" , "0488337746" ,"VanakenBroek"));
+                .withWerkgever(wg);
     }
 
-    public static JobBuilder nOKJob(){
-        PasswordEncoder encoder = new BCryptPasswordEncoder();
-        String ww = "pw";
-        String origenal = encoder.encode(ww);
-        return aJob().withId(2)
-                .withBeschrijving("Sales Manager")
+    public static JobBuilder anOtherOKJob(){
+        Werkgever wg = WerkgeverBuilder.anOKWerkgever().build();
+        return aJob().withId(3)
+                .withBeschrijving("OKOKOK")
+                .withDuur("HIER EN DAAR")
                 .withDatum(new Date())
                 .withJobStatus("beschikbaar")
+                .withDetails("ALLES IS OK")
+                .withWerkgever(wg);
+    }
+    public static JobBuilder nOKJob(){
+        Werkgever wg = WerkgeverBuilder.anOtherOKWerkgever().build();
+        return aJob().withId(5)
+                .withBeschrijving("Sales Manager")
+                .withDatum(new Date())
+                .withJobStatus("voldaan")
                 .withDetails("+20jaar")
-                .withWerkgever(new Werkgever("Elise", "De Craene", origenal, "elise@lol.be" , "0488337746" ,"VanakenBroek"));
+                .withWerkgever(wg);
     }
 
     public JobBuilder withId(int id){
