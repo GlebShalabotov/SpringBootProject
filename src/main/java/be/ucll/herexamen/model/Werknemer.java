@@ -16,48 +16,6 @@ import java.util.*;
 @Table(name = "WERKNEMER")
 public class Werknemer extends User {
 
- /*   @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-
-    @NotNull
-    @NotEmpty
-    public String email;
-    private String password;
-    private String role;*/
-
-  /*  public String getRoll() {
-        return role;
-    }
-
-    public void setRoll() {
-        this.role = "WERKNEMER";
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }*/
 
     @NotNull
     @NotEmpty
@@ -84,8 +42,9 @@ public class Werknemer extends User {
 
     private int leeftijd;
 
-    public Werknemer(){
+    public Werknemer()  {
         setRole("ROLE_WERKNEMER");
+        setAangemeldMetDatum(new Date());
     }
 
     public Werknemer(String name, String lastName, String pw, String geboorteJaar, String email, String cv) throws ParseException {
@@ -120,7 +79,12 @@ public class Werknemer extends User {
 
         this.aangemeld = DateToStr;
     }
+    public void setAangemeldMetDatum(Date aangemeld){
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 
+        String DateToStr = format.format(aangemeld);
+        this.aangemeld = DateToStr;
+    }
     public Job getCurrentJob() {
         return currentJob;
     }
@@ -133,8 +97,10 @@ public class Werknemer extends User {
         return geboorteJaar;
     }
 
-    public void setGeboorteJaar(String geboorteJaar) {
+    public void setGeboorteJaar(String geboorteJaar) throws ParseException {
+
         this.geboorteJaar = geboorteJaar;
+        this.leeftijd = (calculateAge(geboorteJaar));
     }
 
     public int getLeeftijd() {
@@ -204,6 +170,19 @@ public class Werknemer extends User {
             setCurrentJob(j);
         }
         else throw new Exception("already has a current job");
+    }
+
+    public void updateWn(Werknemer wn) throws ParseException {
+
+        setEmail(wn.getEmail());
+        setPassword(wn.getPassword());
+        setName(wn.getName());
+        setLastName(wn.getLastName());
+        setCv(wn.getCv());
+        setCurrentJob(wn.getCurrentJob());
+        setGeboorteJaar(wn.getGeboorteJaar());
+
+
     }
 
 

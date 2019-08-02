@@ -40,14 +40,13 @@ public class Werkgever extends User{
     @NotEmpty
     private String telefoon;
 
-    @NotNull
-    @NotEmpty
+
     private String aangemeld;
 
 
     private String bedrijf;
 
-    private double score;
+    private int score;
 
 
 
@@ -59,6 +58,8 @@ public class Werkgever extends User{
     }*/
     public Werkgever(){
         setRole("ROLE_WERKGEVER");
+        setAangemeldMetDatum(new Date());
+        setBedrijf("NVT");
     }
 
 
@@ -154,7 +155,7 @@ public class Werkgever extends User{
     }
 
 
-    public double getScore() {
+    public int getScore() {
 
         return score;
     }
@@ -167,5 +168,13 @@ public class Werkgever extends User{
     }
 
 
-
+    public void updateWg(Werkgever wg) {
+        setScore(wg.getScore());
+        setEmail(wg.getEmail());
+        setPassword(wg.getPassword());
+        setName(wg.getName());
+        setLastName(wg.getLastName());
+        setTelefoon(wg.getTelefoon());
+        setBedrijf(wg.getBedrijf());
+    }
 }

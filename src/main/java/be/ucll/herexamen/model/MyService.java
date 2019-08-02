@@ -5,8 +5,11 @@ import be.ucll.herexamen.repositry.UserRepository;
 import be.ucll.herexamen.repositry.WerkgeverRepository;
 import be.ucll.herexamen.repositry.WerknemerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -63,10 +66,23 @@ public class MyService {
         return jobsRepository.findAllByWerkgeverId( wg.getId());
     }
     // WG
-    private void addWerkgever(Werkgever werkgever) {
+
+    public List<Werkgever> findAllWerkgevers(){
+        return werkgeverRepository.findAll();
+    }
+
+    public Werkgever findWerkgeverByEmail(String email) {
+        return werkgeverRepository.findByEmail(email);
+    }
+
+    public void addWerkgever(Werkgever werkgever) {
 
         Werkgever werkgever1 = werkgeverRepository.findByEmail(werkgever.getEmail());
         if ( werkgever1 == null){
+            PasswordEncoder encoder = new BCryptPasswordEncoder();
+            String ww = werkgever.getPassword();
+            String encodedWW = encoder.encode(ww);
+            werkgever.setPassword(encodedWW);
             werkgeverRepository.save(werkgever);
         }
     }
@@ -89,8 +105,27 @@ public class MyService {
         jobsRepository.delete(j);
     }
 
-
     // WN
+
+    public List<Werknemer> findAllWerknemers(){
+        return werknemerRepository.findAll();
+    }
+
+    private Werknemer findWerknemerByEmail(String email) {
+        return werknemerRepository.findByEmail(email);
+    }
+
+    public void addWerknemer(Werknemer werknemer) {
+        Werknemer werknemer1 = werknemerRepository.findByEmail(werknemer.getEmail());
+        if ( werknemer1 == null){
+            PasswordEncoder encoder = new BCryptPasswordEncoder();
+            String ww = werknemer.getPassword();
+            String encodedWW = encoder.encode(ww);
+            werknemer.setPassword(encodedWW);
+            werknemerRepository.save(werknemer);
+        }
+    }
+
     public void addJobToWN(String wnEmail, int id) throws Exception {
         Werknemer wn = werknemerRepository.findByEmail(wnEmail);
 
@@ -118,8 +153,8 @@ public class MyService {
      public List<Job> getAllJobsWN(Werknemer wn){
         return wn.getJobs();
      }
-
     //USER
+
     public String findRoleUserByMail(String mail) {
         User user = userRepository.findByEmail(mail);
         return user.getRole();
@@ -153,5 +188,55 @@ public class MyService {
         wg.setScore(totaalscore);
 
         werkgeverRepository.save(wg);
+    }
+
+
+    public void updateWerkgever(Werkgever werkgever) {
+        Werkgever wg = findWerkgeverByEmail(werkgever.getEmail());
+
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        String ww = werkgever.getPassword();
+        String encodedWW = encoder.encode(ww);
+        werkgever.setPassword(encodedWW);
+
+        wg.updateWg(werkgever);
+
+        werkgeverRepository.save(wg);
+    }
+
+    public void updateWerknemer(Werknemer werknemer) throws ParseException {
+        Werknemer wn = findWerknemerByEmail(werknemer.getEmail());
+
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        String ww = werknemer.getPassword();
+        String encodedWW = encoder.encode(ww);
+        werknemer.setPassword(encodedWW);
+
+        wn.updateWn(werknemer);
+
+        werknemerRepository.save(wn);
+    }
+
+
+    public void deleteWerknemerById(int id) {
+            Werknemer wn = werknemerRepository.findById(id);
+            Job j = wn.getCurrentJob();
+            if ( j == null){
+                j.setJobStatus("Beschikbaar");
+                jobsRepository.save(j);
+            }
+
+            werknemerRepository.delete(wn);
+    }
+
+    public void deleteWerkgeverById(int id) {
+        Werkgever wg = werkgeverRepository.findById(id);
+        List<Job> jobs = jobsRepository.findAllByWerkgeverId(id);
+        if (!jobs.isEmpty()){
+            for (Job j : jobs){
+                jobsRepository.delete(j);
+            }
+        }
+        werkgeverRepository.delete(wg);
     }
 }

@@ -49,6 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/toevoegen/add","/toevoegen/add/*","/toevoegen/add/**", "/toevoegen/add/***").hasRole("WERKGEVER")
                 .mvcMatchers(HttpMethod.POST, "/toevoegen/add").hasRole("WERKGEVER")
                 .mvcMatchers("/aannemen", "/aannemen/*" ,"/aannemen/**", "/aannemen/***").hasRole("WERKNEMER")
+                .mvcMatchers("/werkgever/*", "/werknemer/*", "/werkgever/**", "/werknemer/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
