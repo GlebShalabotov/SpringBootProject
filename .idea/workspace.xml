@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12cb581a-bc78-4624-b408-83620c76e4b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -55,7 +55,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="23" />
+          <entry key="Groovy" value="25" />
           <entry key="JAVA" value="20354" />
           <entry key="JSP" value="4422" />
           <entry key="PLAIN_TEXT" value="21" />
@@ -95,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+            <state relative-caret-position="39">
+              <caret line="102" column="68" selection-start-line="102" selection-start-column="68" selection-end-line="102" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -384,9 +384,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6256688424718" />
+        <entry key="$PROJECT_DIR$" value="6257600256031" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3779188308" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1694984165" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2585518924" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="3751339951" />
       </map>
@@ -627,7 +627,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" />
@@ -644,6 +643,7 @@
         <option value="$PROJECT_DIR$/src/test/java/WerkgeverBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/ServiceUnitTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/JobBuilder.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -899,7 +899,7 @@
       <workItem from="1564641453389" duration="24129000" />
       <workItem from="1564732529588" duration="24368000" />
       <workItem from="1564779893181" duration="4525000" />
-      <workItem from="1564825443144" duration="1994000" />
+      <workItem from="1564825443144" duration="2279000" />
     </task>
     <servers />
   </component>
@@ -933,7 +933,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181278000" />
+    <option name="totallyTimeSpent" value="181563000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1337,8 +1337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+        <state relative-caret-position="39">
+          <caret line="102" column="68" selection-start-line="102" selection-start-column="68" selection-end-line="102" selection-end-column="68" />
         </state>
       </provider>
     </entry>
