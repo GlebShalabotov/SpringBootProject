@@ -1,6 +1,6 @@
 package be.ucll.herexamen.model;
 
-import be.ucll.herexamen.repositry.JobsRepository;
+import be.ucll.herexamen.repositry.JobRepository;
 import be.ucll.herexamen.repositry.UserRepository;
 import be.ucll.herexamen.repositry.WerkgeverRepository;
 import be.ucll.herexamen.repositry.WerknemerRepository;
@@ -10,16 +10,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @org.springframework.stereotype.Service
 public class MyService {
 
 
     @Autowired
-    JobsRepository jobsRepository;
+    JobRepository jobsRepository;
 
     @Autowired
     WerknemerRepository werknemerRepository;
@@ -70,10 +68,11 @@ public class MyService {
     }
     // WG
 
+//tested
     public List<Werkgever> findAllWerkgevers(){
         return werkgeverRepository.findAll();
     }
-
+//tested
     public Werkgever findWerkgeverByEmail(String email) {
         return werkgeverRepository.findByEmail(email);
     }
@@ -102,17 +101,23 @@ public class MyService {
         jobsRepository.save(job);
     }
 
-
+//tested
     public void deleteJobById(int id) {
         Job j = findJobById(id);
         jobsRepository.delete(j);
     }
 
-    // WN
+    public List<Job> getJobWithBeschrijving(String beschrijving){
 
+        List<Job> jl = jobsRepository.findByJobStatusAndBeschrijvingLike("Beschikbaar","%"+ beschrijving + "%");
+        return jl;
+    }
+    // WN
+    //tested
     public List<Werknemer> findAllWerknemers(){
         return werknemerRepository.findAll();
     }
+
 
     private Werknemer findWerknemerByEmail(String email) {
         return werknemerRepository.findByEmail(email);

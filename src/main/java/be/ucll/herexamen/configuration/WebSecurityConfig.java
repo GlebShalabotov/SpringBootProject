@@ -31,12 +31,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http ) throws Exception{
 
         http.authorizeRequests()
-                .mvcMatchers("/overzicht", "/", "/index", "/login").permitAll()
+                .mvcMatchers("/overzicht", "/", "/index", "/login","/css/bootstrap.css","/css/eigen.css", "/css/reset.css").permitAll()
                 .mvcMatchers("/overzicht/details*","/h2-console/*", "/h2-console/**", "h2-console/***", "/profiel").hasAnyRole("WERKGEVER", "WERKNEMER")
                 .mvcMatchers("/toevoegen/*").hasRole("WERKGEVER")
                 .mvcMatchers("/toevoegen/add","/toevoegen/add/*","/toevoegen/add/**", "/toevoegen/add/***").hasRole("WERKGEVER")
                 .mvcMatchers(HttpMethod.POST, "/toevoegen/add").hasRole("WERKGEVER")
-                .mvcMatchers("/aannemen", "/aannemen/*" ,"/aannemen/**", "/aannemen/***").hasRole("WERKNEMER")
+                .mvcMatchers("/aannemen", "/aannemen/*" ,"/aannemen/**", "/aannemen/***", "/aannemen/beschrijving").hasRole("WERKNEMER")
+                .mvcMatchers(HttpMethod.POST, "/aannemen/beschrijving").hasRole("WERKNEMER")
                 .mvcMatchers("/werkgever/*", "/werknemer/*", "/werkgever/**", "/werknemer/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

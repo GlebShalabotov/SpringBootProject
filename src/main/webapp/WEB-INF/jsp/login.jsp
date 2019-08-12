@@ -1,7 +1,11 @@
 <%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
 
+<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,30 +15,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
 </head>
-<body>
+<body class="text-center">
 <jsp:include page="header.jsp"/>
 
-<div >
-    <a href="/login?lang=en">login English</a>
-    &nbsp;|&nbsp;
-    <a href="/login?lang=fr">login Française</a>
-    &nbsp;|&nbsp;
-    <a href="/login?lang=nl">login Nederlands</a>
-</div>
-<h1><spring:message code="h1login"/></h1>
-<h2><spring:message code="h2login"/></h2>
+<div class="container">
+<h1 class="h1 mb-3 font-weight-normal"><spring:message code="h1login"/></h1>
+<h2 class="h2 mb-2 font-weight-normal"><spring:message code="h2login"/></h2>
 <div>
     <c:forEach items="${errors}" var="error">
         <p>${error.field}: ${error.defaultMessage}</p>
     </c:forEach>
 </div>
-<form action="/login" method="POST">
-    <label > <spring:message code="begruikersemail"/> </label>
-    <input type="text" name= "email" />
-    <label> <spring:message code="gebruikerswachtwoord"/> </label>
-    <input type="password" name="password" />
-    <input type="submit" name="submit" value="LOGIN" />
+<form class="form-signin loginBody" action="/login" method="POST">
+    <input class = "form-control"  type="text" name= "email" placeholder="<spring:message code="begruikersemail"/>" />
+    <input class="form-control"type="password" name="password" placeholder="<spring:message code="gebruikerswachtwoord"/>"/>
+    <input class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="LOGIN" />
 </form>
+
+<div class="row justify-content-center" >
+    <a href="/login?lang=en">login English</a>
+    &nbsp;|&nbsp;
+    <a href="/login?lang=fr">login Francaise</a>
+    &nbsp;|&nbsp;
+    <a href="/login?lang=nl">login Nederlands</a>
+</div>
+</div>
 </body>
 
 </html>

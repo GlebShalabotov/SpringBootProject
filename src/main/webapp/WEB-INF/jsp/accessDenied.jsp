@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,9 +12,9 @@
     <title>Document</title>
 </head>
 <jsp:include page="header.jsp"/>
-<body>
+<body class="alert alert-danger">
 <h2>Sorry, you do not have permission to view this page.</h2>
 
-Click <a href="/index">here</a> to go back to the Homepage.
+Click <a href="/index" class="alert-link">here</a> to go back to the Homepage.
 </body>
 </html>

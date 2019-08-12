@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <!doctype html>
 <html lang="nl">
 <head>
@@ -16,8 +20,8 @@
     <form action="/overzicht/finish/${job.id}" method="post" >
     <div>${wg.name} ${wg.lastName} </div>
     <select name="score" id="score">
-        <option selected>0</option>
-        <option>1</option>
+
+        <option selected>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>

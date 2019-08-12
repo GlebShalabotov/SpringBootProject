@@ -1,4 +1,8 @@
 <!doctype html>
+<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <html lang="nl">
 <head>
     <meta charset="UTF-8">

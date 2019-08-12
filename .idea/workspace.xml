@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12cb581a-bc78-4624-b408-83620c76e4b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages_fr.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages_nl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/messages_nl.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aannemen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aannemen.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/accessDenied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/accessDenied.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voltooien.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voltooien.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JobBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JobBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ServiceUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ServiceUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WerknemerBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WerknemerBuilder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -22,42 +49,52 @@
     <session id="517436239">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.31" value="3" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bat" value="3" />
           <entry key="CLASS" value="1" />
-          <entry key="Groovy" value="12" />
-          <entry key="JAVA" value="234" />
+          <entry key="CSS" value="18" />
+          <entry key="Groovy" value="13" />
+          <entry key="HTML" value="5" />
+          <entry key="JAVA" value="278" />
           <entry key="JSON" value="1" />
-          <entry key="JSP" value="118" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Properties" value="29" />
+          <entry key="JSP" value="164" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Properties" value="36" />
+          <entry key="SourceMap" value="1" />
+          <entry key="TypeScript" value="15" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="CSS" value="335" />
           <entry key="Groovy" value="25" />
-          <entry key="JAVA" value="20354" />
-          <entry key="JSP" value="4422" />
+          <entry key="HTML" value="256" />
+          <entry key="JAVA" value="24814" />
+          <entry key="JSP" value="5550" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Properties" value="1146" />
+          <entry key="Properties" value="1222" />
+          <entry key="TypeScript" value="497" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages">
@@ -65,97 +102,97 @@
           <entry key="EditRuntimeBean.fromToolWindowPanel" value="1" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="Angular2LanguageService" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ServiceUnitTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="145" column="57" selection-start-line="145" selection-start-column="57" selection-end-line="145" selection-end-column="57" />
+            <state relative-caret-position="289">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradlew.bat">
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-938" />
+            <state>
+              <folding>
+                <element signature="e#0#73#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradlew">
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.css">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="119" selection-start-line="119" selection-end-line="119" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state>
               <folding>
-                <marker date="1564828476689" expanded="true" signature="168:191" ph="..." />
+                <element signature="e#0#73#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebMvcConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-159">
-              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1934#1935#0" expanded="true" />
-                <element signature="e#1994#1995#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.ts">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/app.component.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties">
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
-          <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/angularclient/src/app/app-routing.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -163,7 +200,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="Class" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -173,6 +212,7 @@
       <find>werkgeverREpositry</find>
       <find>WERK</find>
       <find>upda</find>
+      <find>boot</find>
     </findStrings>
     <replaceStrings>
       <replace>werknemerRepository</replace>
@@ -583,57 +623,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/JobType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/H2Conf.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/H2Conf.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/H2Configuration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/CustomAccessDeniedHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Gebruikers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/WerkgeverRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/WerknemerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobScoreRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/JobScore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Job.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voltooien.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werknemer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/RestControllerWN.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/UserBaseRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/RestControllerWG.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aannemen.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_nl.properties" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werkgever.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_fr.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/WerkgeverBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/WerknemerBuilder.java" />
-        <option value="$PROJECT_DIR$/src/test/java/WerknemerBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java" />
         <option value="$PROJECT_DIR$/src/test/java/WerkgeverBuilder.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ServiceUnitTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/JobBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/java/WerknemerBuilder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RestControllerWGIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/reset.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voltooien.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/accessDenied.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/model/ServiceUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ServiceUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/controller/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/controller/RestControllerWGUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JobBuilder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JobRepositoryIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RestControllerWGUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/eigen.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_fr.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/i18n/messages_nl.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aannemen.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/werknemer.ts" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/data.service.ts" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/werkgever.ts" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.html" />
+        <option value="$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.ts" />
       </list>
     </option>
   </component>
@@ -643,10 +683,19 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/angularclient/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/angularclient/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -656,7 +705,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -664,11 +713,102 @@
               <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
               <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="angularclient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="angularclient" type="462c0819:PsiDirectoryNode" />
+              <item name="e2e" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="angularclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="angularclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="angularclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="werkgever" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="angularclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="werknemer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="angularclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="herexamen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="herexamen" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2_Gleb_Shalabotov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2_Gleb_Shalabotov" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="herexamen" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -681,22 +821,36 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564841699533" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565641274798" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ArneVandoorslaerIPGerechten" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="ts.external.directory.path" value="C:\Users\Gleb0\Documents\Programmeren\Directories\IP_Test\ucll\2_Gleb_Shalabotov\angularclient\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CreateBuilderDialog.RecentsKey">
       <recent name="be.ucll.herexamen.model" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gleb0\Documents\Programmeren\Directories\IP_Test\ucll\2_Gleb_Shalabotov\src\main\webapp\css" />
+      <recent name="C:\Users\Gleb0\Documents\Programmeren\Directories\IP_Test\ucll\2_Gleb_Shalabotov\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Gleb0\Documents\Programmeren\Directories\IP_Test\ucll\2_Gleb_Shalabotov\src\test\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gleb0\Documents\Programmeren\Directories\IP_Test\ucll\2_Gleb_Shalabotov\angularclient\src\app" />
+      <recent name="C:\Users\Gleb0\Documents\Programmeren\Directories\IP_Test\ucll\2_Gleb_Shalabotov\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -726,6 +880,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JobRepositoryIntegrationTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="2_Gleb_Shalabotov_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JobRepositoryIntegrationTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="2_Gleb_Shalabotov_main" />
       <extension name="coverage">
@@ -742,6 +906,7 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="JUnit.JobRepositoryIntegrationTest" />
       <item itemvalue="JUnit.All in 2_Gleb_Shalabotov_test" />
     </list>
     <recent_temporary>
@@ -774,41 +939,50 @@
       <workItem from="1564641453389" duration="24129000" />
       <workItem from="1564732529588" duration="24368000" />
       <workItem from="1564779893181" duration="4525000" />
-      <workItem from="1564825443144" duration="5525000" />
+      <workItem from="1564825443144" duration="6437000" />
+      <workItem from="1564989306143" duration="15816000" />
+      <workItem from="1565100280232" duration="9021000" />
+      <workItem from="1565439916145" duration="2047000" />
+      <workItem from="1565462926763" duration="6106000" />
+      <workItem from="1565534750622" duration="7059000" />
+      <workItem from="1565634566020" duration="5698000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.02 at 22h 16m 19s.xml">
+    <history-entry file="JobRepositoryIntegrationTest - 2019.08.05 at 20h 43m 31s.xml">
+      <configuration name="JobRepositoryIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.10 at 22h 21m 00s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.02 at 22h 18m 16s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 17h 22m 56s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.02 at 23h 56m 58s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 18h 54m 00s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.02 at 23h 57m 36s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 18h 55m 59s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.02 at 23h 58m 45s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 18h 56m 31s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.03 at 00h 04m 10s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 18h 57m 00s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.03 at 00h 05m 40s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 18h 57m 30s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.03 at 00h 06m 36s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 18h 59m 23s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.03 at 00h 22m 04s.xml">
+    <history-entry file="All_in_2_Gleb_Shalabotov_test - 2019.08.11 at 19h 00m 43s.xml">
       <configuration name="All in 2_Gleb_Shalabotov_test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184809000" />
+    <option name="totallyTimeSpent" value="231468000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,26 +994,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24630873" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87782806" visible="true" weight="0.20842217" />
+      <window_info id="Structure" order="1" sideWeight="0.50236964" side_tool="true" weight="0.24630873" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.122171946" side_tool="true" weight="0.2557047" />
+      <window_info anchor="bottom" id="TypeScript" weight="0.29896906" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4626219" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46175638" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32827735" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.48725212" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33694476" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.4858357" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4986577" weight="0.32719547" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
@@ -856,8 +1032,45 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.3295302" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87782806" visible="true" weight="0.2557047" />
+      <window_info id="Structure" order="1" sideWeight="0.50236964" side_tool="true" weight="0.24630873" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" sideWeight="0.122171946" side_tool="true" visible="true" weight="0.2557047" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46175638" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32827735" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.40084985" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.4858357" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4986577" weight="0.32719547" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4986577" visible="true" weight="0.37393767" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.3295302" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -866,357 +1079,358 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voltooien.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.0.8.RELEASE/cdfd519782c9f02718d6a8b7ad6dc296588569c6/spring-security-config-5.0.8.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/configurers/FormLoginConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3417">
-          <caret line="228" column="34" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/JobsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/werkgever.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/repositry/UserBaseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/RestControllerWG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/RestControllerWN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.0.9.RELEASE/bf1c19aadae4724bfe7e9196652e649bb08a99c4/spring-context-5.0.9.RELEASE-sources.jar!/org/springframework/context/annotation/Bean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="218" column="18" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/Resource Bundle 'messages'/messages_nl.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/Resource Bundle 'messages'/messages_en.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/Resource Bundle 'messages'/messages_fr.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        <state relative-caret-position="17">
+          <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/verwijder.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        <state relative-caret-position="17">
+          <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_nl.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voltooien.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state>
+          <caret column="69" selection-start-column="69" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="1275">
+          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="49" selection-end-column="24" />
-          <folding>
-            <element signature="n#c:otherwise#0;n#c:choose#0;n#c:if#0;n#jsp:root#0;n#!!top" />
-            <element signature="n#c:choose#1;n#c:if#0;n#jsp:root#0;n#!!top" />
-            <element signature="n#c:if#1;n#jsp:root#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/update.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="17">
+          <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/huidigejob.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aannemen.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aanpassen.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="52" />
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/accessDenied.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+        <state relative-caret-position="289">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="578">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/WerkgeverBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/application-integrationtest.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/JobsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2601">
+          <caret line="168" column="55" selection-start-line="168" selection-start-column="55" selection-end-line="168" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/controller/MenuController.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/WerkgeverBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werknemer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="166" selection-start-line="166" selection-end-line="166" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/WerknemerBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="261">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ServiceUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="56" column="4" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/MyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/RestControllerWGIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/JobBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-793">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JobRepositoryIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/toevoegen.jsp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werkgever.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/eigen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Job.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/RestControllerWGUnitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_fr.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ServiceUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="145" column="57" selection-start-line="145" selection-start-column="57" selection-end-line="145" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-938" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1934#1935#0" expanded="true" />
-            <element signature="e#1994#1995#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/CustomAccessDeniedHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_nl.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/aannemen.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/overzicht.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/messages_fr.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141389">
+          <caret line="8317" column="1" selection-start-line="8317" selection-start-column="1" selection-end-line="8317" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profiel.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werkgever.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/model/Werknemer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/controller/RestControllerWG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <marker date="1564828476689" expanded="true" signature="168:191" ph="..." />
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/ucll/herexamen/configuration/WebSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werkgever.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/data.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="323">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#174#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werknemer/werknemer.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularclient/src/app/werkgever/werkgever.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -162,6 +162,14 @@ public class JobsController implements WebMvcConfigurer{
         return "huidigejob";
     }
 
+
+    @PostMapping("/aannemen/beschrijving")
+    public String jobVindenOpBeschrijving (@RequestParam(value = "beschrijving") String beschrijving, Model model){
+        setUser(model);
+        model.addAttribute("jobs",myService.getJobWithBeschrijving(beschrijving));
+        return "aannemen";
+    }
+
     @GetMapping("/profiel")
     public String  profiel(Model model){
         setUser(model);

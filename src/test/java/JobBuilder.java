@@ -26,7 +26,7 @@ public class JobBuilder {
     }
     public static JobBuilder anOKJob(){
         Werkgever wg = WerkgeverBuilder.anOKWerkgever().build();
-        return aJob().withId(2)
+        return aJob().withId(10)
                 .withBeschrijving("Sales Manager")
                 .withDuur("vast")
                 .withDatum(new Date())
@@ -37,7 +37,7 @@ public class JobBuilder {
 
     public static JobBuilder anOtherOKJob(){
         Werkgever wg = WerkgeverBuilder.anOKWerkgever().build();
-        return aJob().withId(3)
+        return aJob().withId(30)
                 .withBeschrijving("OKOKOK")
                 .withDuur("HIER EN DAAR")
                 .withDatum(new Date())
@@ -47,7 +47,7 @@ public class JobBuilder {
     }
     public static JobBuilder nOKJob(){
         Werkgever wg = WerkgeverBuilder.anOtherOKWerkgever().build();
-        return aJob().withId(5)
+        return aJob().withId(50)
                 .withBeschrijving("Sales Manager")
                 .withDatum(new Date())
                 .withJobStatus("voldaan")
@@ -55,6 +55,16 @@ public class JobBuilder {
                 .withWerkgever(wg);
     }
 
+    public static JobBuilder sameJobAsOKJOBDifferentDetailsAndBeschrijving(){
+        Werkgever wg = WerkgeverBuilder.anOKWerkgever().build();
+        return aJob().withId(22)
+                .withBeschrijving("Anders")
+                .withDuur("vast")
+                .withDatum(new Date())
+                .withJobStatus("beschikbaar")
+                .withDetails("Anders")
+                .withWerkgever(wg);
+    }
     public JobBuilder withId(int id){
         this.id = id;
         return this;

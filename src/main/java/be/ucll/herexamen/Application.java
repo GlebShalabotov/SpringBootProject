@@ -4,7 +4,7 @@ package be.ucll.herexamen;
 import be.ucll.herexamen.model.Job;
 import be.ucll.herexamen.model.Werkgever;
 import be.ucll.herexamen.model.Werknemer;
-import be.ucll.herexamen.repositry.JobsRepository;
+import be.ucll.herexamen.repositry.JobRepository;
 import be.ucll.herexamen.repositry.WerkgeverRepository;
 import be.ucll.herexamen.repositry.WerknemerRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -14,8 +14,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-import javax.management.Query;
 
 @SpringBootApplication
 public class Application {
@@ -38,17 +36,17 @@ public class Application {
 
    @Bean
     @Order(2)
-    public CommandLineRunner runnerJobs (JobsRepository jobsRepository, WerkgeverRepository werknemerRepository){
+    public CommandLineRunner runnerJobs (JobRepository jobsRepository, WerkgeverRepository werknemerRepository){
         return JobsArgs -> {
-            jobsRepository.save(new Job("Sales Manager", "3 maanden", "7 jaar ervaring", werknemerRepository.findByEmail("elise@lol.be")));
-            jobsRepository.save(new Job("Netwerk Beheerder Junior", "Vast Contract", "+18","volzet", werknemerRepository.findByEmail("mechel@broek.be")));
-            jobsRepository.save(new Job("Team-Leader", "Part-Time", "team project voor softMicro", werknemerRepository.findByEmail("Destroyer@worlds.be")));
+            jobsRepository.save(new Job("sales manager", "3 maanden", "7 jaar ervaring", werknemerRepository.findByEmail("elise@lol.be")));
+            jobsRepository.save(new Job("netwerk beheerder Junior", "Vast Contract", "+18","volzet", werknemerRepository.findByEmail("mechel@broek.be")));
+            jobsRepository.save(new Job("team-leader", "Part-Time", "team project voor softMicro", werknemerRepository.findByEmail("Destroyer@worlds.be")));
         };
     }
 
     @Bean
     @Order(3)
-    public CommandLineRunner runnerWerknemers (WerknemerRepository werknemerRepository, JobsRepository jobsRepository){
+    public CommandLineRunner runnerWerknemers (WerknemerRepository werknemerRepository, JobRepository jobsRepository){
         return WerknemerArgs -> {
             PasswordEncoder encoder = new BCryptPasswordEncoder();
             String ww = "pw";

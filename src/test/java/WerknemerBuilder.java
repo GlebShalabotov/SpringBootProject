@@ -41,6 +41,19 @@ public final class WerknemerBuilder {
                 .withCv("afgestuurd")
                 .withGeboorteJaar("20/10/2000");
     }
+    public static WerknemerBuilder alsoOKWerknemer(){
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        String ww = "pw";
+        String origenal = encoder.encode(ww);
+        return aWerknemer().withId(9)
+                .withPassword(ww)
+                .withEmail("sad@gamer.be")
+                .withName("sad")
+                .withLastName("sddd")
+                .withAangemeld("20/09/2009")
+                .withCv("9ofzo")
+                .withGeboorteJaar("20/10/2000");
+    }
     public WerknemerBuilder withId(int id) {
         this.id = id;
         return this;

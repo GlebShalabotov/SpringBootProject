@@ -1,4 +1,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,28 +14,8 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<p> toevoegen page</p>
-<%--<table>
-    <thead>
-    <th>Beschrijving</th>
-    <th>Duur</th>
-    <th>werkgever</th>
-    <th>datum</th>
-    <th>details job</th>
+<h1> Toevoegen van nieuwe job</h1>
 
-    </thead>
-    <tbody>
-    <c:forEach var="job" items="${jobs}">
-        <tr>
-            <td>${job.jobID}</td>
-            <td>${job.duur}</td>
-            <td>${job.werkgever.name}</td>
-            <td>${job.datum}</td>
-            <td><a href="/overzicht/details/${job.jobID}">details</a></td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>--%>
 
 <c:if test="${errors!=null}">
     <div>
@@ -42,21 +26,21 @@
 </c:if>
 
 <form action="/toevoegen/add" method="POST" modelAttribute="job">
-    <div>
-        <label>Beschrijving</label>
-        <input type="text" name="beschrijving"/>
+    <div class="">
+        <label class="">Beschrijving</label>
+        <input class="" type="text" name="beschrijving"/>
     </div>
-    <div>
-        <label>Duur</label>
-        <input type="text" name="duur"/>
+    <div class="">
+        <label class="">Duur</label>
+        <input class="" type="text" name="duur"/>
     </div>
-    <div>
-        <label>Details</label>
-        <input type="text" name="details"/>
+    <div class="">
+        <label class="">Details</label>
+        <input class="" type="text" name="details"/>
     </div>
-    <div>
-        <button type="submit">Post</button>
-        <button type="reset">Cancel</button>
+    <div class="buttonform">
+        <button class="btn btn-success m-3" type="submit">Post</button>
+        <button class="btn btn-danger m-3" type="reset">Cancel</button>
     </div>
 </form>
 

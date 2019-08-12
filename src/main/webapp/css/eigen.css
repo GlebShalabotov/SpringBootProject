@@ -1,0 +1,45 @@
+html{
+    color: #8E8D84;
+}
+.loginBody{
+    width: 400px;
+    margin: auto;
+}
+
+body{
+    width: 80%;
+    margin: auto;
+    background: #EAE7DC;
+}
+h1{
+    color: #E8514F;
+}
+
+h2,h3{
+    color: #E98074;
+}
+
+a{
+    text-decoration: none;
+    color: #E8514F;
+    display: block;
+}
+
+a:hover{
+    color: #8E8D84;
+
+}
+
+.centraal{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.formbuttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3em;
+}
+

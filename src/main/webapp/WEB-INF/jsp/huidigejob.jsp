@@ -1,4 +1,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <!doctype html>
 <html lang="nl">
 <head>

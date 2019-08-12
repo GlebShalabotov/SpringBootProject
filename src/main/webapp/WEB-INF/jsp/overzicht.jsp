@@ -1,5 +1,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
+
+<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="nl">
@@ -15,22 +20,24 @@
 <h2>Overzicht</h2>
 
 
-<table>
-    <thead>
+<table class="table">
+    <thead class="thead-light">
 
-    <th><spring:message code="language.beschrijving"/></th>
-    <th><spring:message code="language.duur"/></th>
-    <th><spring:message code="language.werkgever"/></th>
-    <th><spring:message code="language.datum"/></th>
-    <th><spring:message code="language.details"/></th>
+    <th scope="col"><spring:message code="language.beschrijving"/></th>
+    <th scope="col"><spring:message code="language.duur"/></th>
+    <th scope="col"><spring:message code="language.werkgever"/></th>
+    <th scope="col"><spring:message code="language.score"/></th>
+    <th scope="col"><spring:message code="language.datum"/></th>
+    <th scope="col"><spring:message code="language.details"/></th>
 
     </thead>
     <tbody>
     <c:forEach var="job" items="${jobs}">
-        <tr>
+        <tr scope="row">
             <td>${job.beschrijving}</td>
             <td>${job.duur}</td>
             <td>${job.werkgever.name}</td>
+            <td>${job.werknemer.name}</td>
             <td>${job.datum}</td>
             <td>${job.jobStatus}</td>
             <td><a href="/overzicht/details/${job.id}">details</a></td>
