@@ -163,6 +163,9 @@ public class MyService {
      }
     //USER
 
+    public List<User> getAllUsers(){
+       return  userRepository.findAll();
+    }
     public String findRoleUserByMail(String mail) {
         User user = userRepository.findByEmail(mail);
         return user.getRole();

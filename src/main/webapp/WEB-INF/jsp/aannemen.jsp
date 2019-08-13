@@ -18,8 +18,8 @@
 
 <main>
 
-    <div class="container"><h1>Job aanbiedingen</h1>
-    <p>Zoeken op beschrijving </p>
+    <div class="container"><h1><spring:message code="language.headerOverzicht"/></h1>
+    <p><spring:message code="language.zoekenjob" </p>
 
     <form class="form-inline" action="/aannemen/beschrijving" method="post">
         <input class="form-control" type="text" name="beschrijving">

@@ -1,8 +1,0 @@
-
-  <h1>Hier bij een overzicht van alle Werkgevers </h1>
-  <ul *ngIf="werkgevers">
-    <li *ngFor="let werkgever of werkgevers" (click)="selectWerkgever(werkgever)">
-      <span> {{werkgever.name}} {{werkgever.lastName}}: </span>  <span> heeft een score van {{werkgever.score}}</span>
-    </li>
-  </ul>
-

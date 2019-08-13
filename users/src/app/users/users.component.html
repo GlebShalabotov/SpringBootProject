@@ -1,0 +1,7 @@
+<p>give list pls</p>
+<ul *ngIf= "gebruikers">
+  <li *ngFor="let gebruiker of gebruikers" (click)="selectWerkgever(werkgever)">
+    <span> user with id: {{gebruiker.id}}  and email {{gebruiker.email}}: </span>  <span> has role{{gebruiker.role}}</span>
+  </li>
+</ul>
+<p>werkt niet</p>

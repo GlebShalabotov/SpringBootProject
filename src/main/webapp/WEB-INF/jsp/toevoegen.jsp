@@ -25,23 +25,23 @@
     </div>
 </c:if>
 
-<form action="/toevoegen/add" method="POST" modelAttribute="job">
-    <div class="">
+<form class="myForm" action="/toevoegen/add" method="POST" modelAttribute="job">
+
         <label class="">Beschrijving</label>
         <input class="" type="text" name="beschrijving"/>
-    </div>
-    <div class="">
+
+
         <label class="">Duur</label>
         <input class="" type="text" name="duur"/>
-    </div>
-    <div class="">
+
+
         <label class="">Details</label>
         <input class="" type="text" name="details"/>
-    </div>
-    <div class="buttonform">
+
+
         <button class="btn btn-success m-3" type="submit">Post</button>
         <button class="btn btn-danger m-3" type="reset">Cancel</button>
-    </div>
+
 </form>
 
 </body>

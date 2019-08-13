@@ -25,32 +25,30 @@
         </div>
     </c:if>
 
-<form action="/aanpassen/update/${oldJob.id}" method="POST" modelAttribute="job">
+<form class="myForm" action="/aanpassen/update/${oldJob.id}" method="POST" modelAttribute="job">
 
 
-    <div>
+
         <label>Beschrijving</label>
         <input type="text" name="beschrijving" value="${oldJob.beschrijving}"/>
-    </div>
-    <div>
+
         <label>Duur</label>
         <input type="text" name="duur" value="${oldJob.duur}"/>
-    </div>
-    <div>
+
         <label>Details</label>
         <input type="text" name="details" value="${oldJob.details}"/>
-    </div>
+
 
     <input type="hidden" name="id" value="${oldJob.id}">
     <%--<input type="hidden" name="werkgever" value="${oldJob.werkgever}">--%>
     <input type="hidden" name="datum" value="${oldJob.datum}">
     <input type="hidden" name="jobStatus" value="${oldJob.jobStatus}">
 
-    <div>
 
-        <button type="submit">Post</button>
-        <a href="/overzicht">Cancel</a>
-    </div>
+
+        <button class="btn btn-success" type="submit">Post</button>
+        <a class="btn btn-danger" href="/overzicht">Overview </a>
+
 </form>
 </main>
 </body>

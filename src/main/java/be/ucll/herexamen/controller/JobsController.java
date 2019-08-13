@@ -25,7 +25,9 @@ public class JobsController implements WebMvcConfigurer{
     private MyService myService;
 
     @GetMapping("/index")
-    public String index() { return "index";}
+    public String index(Model model) {
+        setUser(model);
+        return "index";}
 
 
     @GetMapping("/overzicht")

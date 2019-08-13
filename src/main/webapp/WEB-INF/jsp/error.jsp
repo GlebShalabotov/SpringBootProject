@@ -8,7 +8,7 @@
 <!doctype html>
 <html lang="en">
 <jsp:include page="header.jsp"/>
-<body class="container">
+<body >
 <div class="alert alert-warning" role="alert">
 <p><spring:message code="errorPage"/></p>
 <a href="/index"><spring:message code="errorPageBtn"/></a>

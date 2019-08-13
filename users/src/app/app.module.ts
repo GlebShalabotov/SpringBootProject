@@ -1,21 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WerkgeverComponent } from './werkgever/werkgever.component';
-import { WerknemerComponent } from './werknemer/werknemer.component';
-import {AppRoutingModule} from "./app-routing.module";
+import { UsersComponent } from './users/users.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-    WerkgeverComponent,
-    WerknemerComponent
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

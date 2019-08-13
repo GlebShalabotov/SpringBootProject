@@ -17,7 +17,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<h2>Overzicht</h2>
+<h1><spring:message code="language.headerOverzicht"/></h1>
 
 
 <table class="table">
@@ -37,10 +37,10 @@
             <td>${job.beschrijving}</td>
             <td>${job.duur}</td>
             <td>${job.werkgever.name}</td>
-            <td>${job.werknemer.name}</td>
+            <td>${job.werkgever.score}</td>
             <td>${job.datum}</td>
             <td>${job.jobStatus}</td>
-            <td><a href="/overzicht/details/${job.id}">details</a></td>
+            <td><a class="btn btn-secondary" href="/overzicht/details/${job.id}">details</a></td>
         </tr>
 </c:forEach>
 </tbody>

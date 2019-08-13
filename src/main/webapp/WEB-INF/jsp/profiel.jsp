@@ -17,14 +17,14 @@
 <jsp:include page="header.jsp"/>
 <h1>Welkom ${user.name} </h1>
 <main>
-    <div class="container">
-        <div class="row"><p>Naam</p><p>${user.name}</p></div>
-        <div class="row"><p>Achternaam</p><p>${user.lastName}</p></div>
-        <div class="row"><p>Email:</p><p>${user.email}</p></div>
+    <div class="eigenGrid">
+        <p class="eigenGridItem">Naam: </p><p class="eigenGridItem">${user.name}</p>
+        <p class="eigenGridItem">Achternaam: </p><p class="eigenGridItem">${user.lastName}</p>
+        <p class="eigenGridItem">Email: </p><p class="eigenGridItem">${user.email}</p>
         <c:if test="${user.role == 'ROLE_WERKGEVER'}">
-            <div class ="row">Score: ${user.score}</div>
+           <p class="eigenGridItem">Score: </p><p class="eigenGridItem">${user.score}</p>
         </c:if>
-       <div class="row"><p>Role:</p><p>${user.role}</p></div>
+     <p class="eigenGridItem">Role:</p><p class="eigenGridItem">${user.role}</p>
     </div>
 <c:if test="${user.role == 'ROLE_WERKNEMER'}">
     <c:choose>
@@ -58,7 +58,7 @@
             </div>
         </c:when>
         <c:otherwise>
-            <h2>Vind <a href="/overzicht">hier</a> een nieuwe job</h2>
+            <h4 class="h2inProfiel" >Vind <a  class="stommeHier" href="/overzicht"> hier </a> een nieuwe job</h4>
         </c:otherwise>
     </c:choose>
     <c:choose>
@@ -106,8 +106,10 @@
                     <th scope="col"><spring:message code="language.duur"/></th>
                     <th scope="col"><spring:message code="language.werkgever"/></th>
                     <th scope="col"><spring:message code="language.datum"/></th>
+                    <th scope="col"><spring:message code="language.jobstatus"/></th>
                     <th scope="col"><spring:message code="language.details"/></th>
-
+                    <th scope="col"><spring:message code="language.update"/></th>
+                    <th scope="col"><spring:message code="language.verwijder"/></th>
                     </thead>
                     <tbody>
                     <c:forEach var="job" items="${jobs}">
@@ -117,9 +119,9 @@
                             <td>${job.werkgever.name}</td>
                             <td>${job.datum}</td>
                             <td>${job.jobStatus}</td>
-                            <td><a href="/overzicht/details/${job.id}">details</a></td>
-                            <td> <a href="/aanpassen/update/${job.id}"> Update </a> </td>
-                            <td> <a href="/aanpassen/verwijder/${job.id}"> Verwijder</a></td>
+                            <td><a class="btn btn-secondary" href="/overzicht/details/${job.id}"><spring:message code="language.details"/></a></td>
+                            <td> <a class="btn btn-info" href="/aanpassen/update/${job.id}"><spring:message code="language.update"/></a> </td>
+                            <td> <a class="btn btn-danger" href="/aanpassen/verwijder/${job.id}"><spring:message code="language.verwijder"/></a></td>
                         </tr>
 
                     </c:forEach>

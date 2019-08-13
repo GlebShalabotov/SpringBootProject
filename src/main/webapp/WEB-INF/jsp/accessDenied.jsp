@@ -15,6 +15,6 @@
 <body class="alert alert-danger">
 <h2>Sorry, you do not have permission to view this page.</h2>
 
-Click <a href="/index" class="alert-link">here</a> to go back to the Homepage.
+Click <a href="/overzicht" class="alert-link">here</a> to go back to the Homepage.
 </body>
 </html>
