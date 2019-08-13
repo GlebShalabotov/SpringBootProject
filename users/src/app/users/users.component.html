@@ -1,7 +1,18 @@
-<p>give list pls</p>
-<ul *ngIf= "gebruikers">
-  <li *ngFor="let gebruiker of gebruikers" (click)="selectWerkgever(werkgever)">
-    <span> user with id: {{gebruiker.id}}  and email {{gebruiker.email}}: </span>  <span> has role{{gebruiker.role}}</span>
-  </li>
-</ul>
-<p>werkt niet</p>
+
+
+<table *ngIf= "gebruikers" class="table">
+  <thead class="thead-dark">
+
+  <th scope="col">ID</th>
+  <th scope="col">Email</th>
+  <th scope="col">Role</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let gebruiker of gebruikers" scope="row" >
+      <td>{{gebruiker.id}}</td>
+      <td>{{gebruiker.email}}</td>
+      <td>{{gebruiker.role}}</td>
+    </tr>
+  </tbody>
+</table>
+

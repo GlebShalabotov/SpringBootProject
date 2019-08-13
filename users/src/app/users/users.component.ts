@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {timer} from "rxjs";
 import {User} from "../user";
 import {DataService} from "../data.service";
+import {applySourceSpanToExpressionIfNeeded} from "@angular/compiler/src/output/output_ast";
 
 
 @Component({
@@ -24,7 +25,7 @@ export class UsersComponent implements OnInit {
     timer(0, 80000)
       .subscribe(() => {
         this.data.getUsers().subscribe(data =>  this.gebruikers = data);
-
+        console.log(this.gebruikers);
       });
   }
 }

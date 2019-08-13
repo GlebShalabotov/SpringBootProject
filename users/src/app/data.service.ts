@@ -12,7 +12,8 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>('localhost:8080/users');
+    console.log("lets get those basterds");
+    return this.http.get<User[]>('http://localhost:8080/users');
 
   }
 }
