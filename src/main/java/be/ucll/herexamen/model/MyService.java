@@ -232,7 +232,7 @@ public class MyService {
     public void deleteWerknemerById(int id) {
             Werknemer wn = werknemerRepository.findById(id);
             Job j = wn.getCurrentJob();
-            if ( j == null){
+            if ( j != null){
                 j.setJobStatus("Beschikbaar");
                 jobsRepository.save(j);
             }
