@@ -1,9 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-<link rel="stylesheet" type="text/css" href="./../../css/reset.css"/>
-<link rel="stylesheet" type="text/css" href="./../../css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="./../../css/eigen.css"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
 
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
@@ -16,6 +13,4 @@
         <li class="nav-item"><a class="nav-link" href="/login"><spring:message code="language.headerLogin"/></a></li>
     </ul>
     </nav>
-
-
 </header>

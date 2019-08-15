@@ -19,22 +19,26 @@
     <p>Op dit moment is dit je huidige baan</p>
     <p>Ben je klaar? Meld dit dan zeker tegen uw begeleider</p>
 
-    <table>
+    <table class="table">
         <thead>
-            <th><spring:message code="language.beschrijving"/></th>
-            <th><spring:message code="language.duur"/></th>
-            <th><spring:message code="language.werkgever"/></th>
-            <th><spring:message code="language.datum"/></th>
-            <th><spring:message code="language.details"/></th>
+
+        <th scope="col"><spring:message code="language.beschrijving"/></th>
+        <th scope="col"><spring:message code="language.duur"/></th>
+        <th scope="col"><spring:message code="language.werkgever"/></th>
+        <th scope="col"><spring:message code="language.datum"/></th>
+        <th scope="col"><spring:message code="language.details"/></th>
+
         </thead>
         <tbody>
-        <tr>
-            <td>${job.beschrijving}</td>
+        <tr scope="row">
+            <td scope="col">${job.beschrijving}</td>
             <td>${job.duur}</td>
             <td>${job.werkgever.name}</td>
             <td>${job.datum}</td>
-            <td><a href="/overzicht/details/${job.id}">details</a></td>
-            <td><a href="/overzicht/finish/${job.id}">afwerken</a></td>
+            <td><a class="btn btn-secondary" href="/overzicht/details/${job.id}"><spring:message code="language.details"/></a></td>
+            <td><a class="btn btn-primary" href="/overzicht/finish/${job.id}">finish</a></td>
+
+
         </tr>
         </tbody>
     </table>
