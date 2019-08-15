@@ -38,9 +38,10 @@ public class Application {
     @Order(2)
     public CommandLineRunner runnerJobs (JobRepository jobsRepository, WerkgeverRepository werknemerRepository){
         return JobsArgs -> {
-            jobsRepository.save(new Job("sales manager", "3 maanden", "7 jaar ervaring", werknemerRepository.findByEmail("elise@lol.be")));
-            jobsRepository.save(new Job("netwerk beheerder Junior", "Vast Contract", "+18","volzet", werknemerRepository.findByEmail("mechel@broek.be")));
+            jobsRepository.save(new Job("salesmanager", "3 maanden", "7 jaar ervaring", werknemerRepository.findByEmail("elise@lol.be")));
+            jobsRepository.save(new Job("netwerkbeheerder Junior", "Vast Contract", "+18","volzet", werknemerRepository.findByEmail("mechel@broek.be")));
             jobsRepository.save(new Job("team-leader", "Part-Time", "team project voor softMicro", werknemerRepository.findByEmail("Destroyer@worlds.be")));
+            jobsRepository.save(new Job("Broodjes Verkoper", "VakantieJob", "Student", werknemerRepository.findByEmail("elise@lol.be")));
         };
     }
 

@@ -25,6 +25,9 @@
         <c:if test="${user.role == 'ROLE_WERKGEVER'}">
            <p class="eigenGridItem">Score: </p><p class="eigenGridItem">${user.score}</p>
         </c:if>
+        <c:if test="${user.role == 'ROLE_WERKNEMER'}">
+            <p class="eigenGridItem">Leeftijd: </p><p class="eigenGridItem">${user.leeftijd}</p>
+        </c:if>
      <p class="eigenGridItem">Role:</p><p class="eigenGridItem">${user.role}</p>
     </div>
 <c:if test="${user.role == 'ROLE_WERKNEMER'}">

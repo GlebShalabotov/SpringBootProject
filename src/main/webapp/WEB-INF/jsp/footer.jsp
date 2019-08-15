@@ -1,5 +1,5 @@
-<footer class="footer mt-auto py-3">
-    <div class="container">
+<footer>
+
         <span class="text-muted">Made bij Shleb. </span>
-    </div>
+
 </footer>

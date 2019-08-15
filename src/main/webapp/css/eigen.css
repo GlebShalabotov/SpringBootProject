@@ -1,5 +1,6 @@
 html{
     color: #8E8D84;
+    height: 100%;
 }
 .loginBody{
     width: 400px;
@@ -8,8 +9,11 @@ html{
 
 body{
     width: 80%;
+    height: 100%;
     margin: auto;
     background: #EAE7DC;
+    display: flex;
+    flex-direction: column;
 }
 h1{
     color: #E8514F;
@@ -104,8 +108,9 @@ a:hover{
 
 footer {
     background-color: #f5f5f5;
-    padding: 0 15px;
+    margin: 0px 10px 0px 0;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
